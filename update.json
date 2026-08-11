@@ -1,9 +1,9 @@
 {
-  "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName.",
-  "versionCode": 1,
-  "versionName": "1.0.0",
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.0/cam-coach-1.0.0-arm64-v8a.apk",
-  "sizeBytes": 50016256,
+  "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
+  "versionCode": 2,
+  "versionName": "1.0.1",
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.1/cam-coach-1.0.1-arm64-v8a.apk",
+  "sizeBytes": 50066326,
   "mandatory": false,
-  "notes": "Bản thử nghiệm đầu tiên. Sáu chế độ chụp, chạy hoàn toàn trên máy."
+  "notes": "Kiểm chứng kênh cập nhật trong app. Cùng mã nguồn với 1.0.0."
 }
