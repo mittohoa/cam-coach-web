@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 4,
-  "versionName": "1.0.3",
+  "versionCode": 5,
+  "versionName": "1.0.4",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.3/cam-coach-1.0.3-arm64-v8a.apk",
-  "sizeBytes": 50066478,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.4/cam-coach-1.0.4-arm64-v8a.apk",
+  "sizeBytes": 50132142,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.3/cam-coach-1.0.3-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.3/cam-coach-1.0.3-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.3/cam-coach-1.0.3-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.4/cam-coach-1.0.4-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.4/cam-coach-1.0.4-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.4/cam-coach-1.0.4-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50066478,
-    "armeabi-v7a": 38540380,
-    "x86_64": 38380582
+    "arm64-v8a": 50132142,
+    "armeabi-v7a": 38540508,
+    "x86_64": 38380710
   },
 
   "mandatory": false,
-  "notes": "Chân dung: nhắc hạ máy khi chân bị nén ngắn. Chụp người: bắt lỗi nền rối phía sau. Sự kiện: thêm ba luật về nhìn đi chỗ khác, đứng quá xa và biểu cảm lệch nhịp."
+  "notes": "Thêm nhóm luật phô dáng: ép tay sát người, đứng hai chân bằng nhau, so vai lên sát tai. Cả ba đều chỉ nhắc nhẹ."
 }
