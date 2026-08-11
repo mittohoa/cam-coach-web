@@ -99,7 +99,7 @@
       </g>
       <circle cx="61.3" cy="46.7" r="5.2" fill="#FF7A1A"/>
     </svg>
-    <b>CAM-Coach<span class="tag" id="ver">1.0.4 · thử nghiệm</span></b>
+    <b>CAM-Coach<span class="tag" id="ver">1.0.5 · thử nghiệm</span></b>
   </div>
 
   <h1>Nói cho bạn biết phải chỉnh gì, <em>trước khi</em> bấm máy.</h1>
@@ -152,13 +152,19 @@
       <tbody>
         <tr><td><b>Chân dung</b></td><td>Chừa quá nhiều khoảng trống trên đầu · cắt cụt ngay tại khớp · đứng quá sát làm méo mặt · chủ thể dính giữa khung · <b>máy cao quá làm chân ngắn</b> · nền rối phía sau</td></tr>
         <tr><td><b>Chấm dáng</b></td><td>Đối chiếu dáng thật với dáng mẫu bằng góc khớp, rồi chỉ ra <b>đúng khớp nào đang sai</b>: “duỗi tay trái ra một chút”, “chùng gối phải xuống”. Kèm luật phô dáng chung: ép tay sát người, đứng hai chân bằng nhau, so vai</td></tr>
-        <tr><td><b>Tự chụp</b></td><td>Đọc lời nhắc thành tiếng qua loa · tự bấm khi khung hình đạt, đếm ngược 3 giây · giơ tay quá vai để chụp từ xa</td></tr>
+        <tr><td><b>Tự chụp</b></td><td>Tự bấm khi khung hình đạt, đếm ngược 3 giây · giơ tay quá vai để chụp từ xa</td></tr>
         <tr><td><b>Sự kiện</b></td><td>Có người nhắm mắt · có người nhìn đi chỗ khác · có người bị che · cả nhóm đứng quá xa · biểu cảm lệch nhịp · mặt tối vì ngược sáng · hội trường thiếu sáng dễ rung tay</td></tr>
         <tr><td><b>Phong cảnh</b></td><td>Chân trời xiên · chân trời cắt giữa khung · cháy trời mất chi tiết · thiếu tiền cảnh nên ảnh phẳng</td></tr>
         <tr><td><b>Đồ vật</b></td><td>Ép đúng góc chuẩn — từ trên xuống hoặc chếch 45° · cảnh báo ánh sáng gắt tạo bóng đổ sắc lẹm</td></tr>
       </tbody>
     </table>
   </div>
+
+  <p class="note">
+    Chế độ nào cũng <b>đọc lời nhắc thành tiếng</b> — mắt bạn đang dán vào khung ngắm thì
+    băng chữ trên đầu màn hình xem như không tồn tại. Cần yên tĩnh thì tắt ở thanh trên,
+    cạnh nút đổi <b>tỉ lệ khung 4:3 / 16:9</b>.
+  </p>
 </section>
 
 <section class="wrap">
@@ -184,39 +190,75 @@
 
 <section class="wrap">
   <h2>Trên màn hình trông như thế nào</h2>
-  <p class="lead">Giao diện cố ý để nhạt: nói xong điều cần nói rồi biến đi, không che mất khung hình bạn đang ngắm.</p>
+  <p class="lead">Khung ngắm chiếm trọn màn hình, điều khiển gom hết xuống bảng dưới — đúng chỗ tay bạn quen tìm ở một app camera. Lời nhắc nói xong điều cần nói rồi biến đi.</p>
 
   <div class="shots">
     <div class="shot">
       <svg viewBox="0 0 220 400" role="img" aria-label="Chế độ chân dung với lời nhắc hạ máy">
-        <rect width="220" height="400" fill="#141310"/>
-        <rect x="0" y="60" width="220" height="280" fill="#2c3330"/>
-        <g stroke="#ffffff" stroke-opacity=".2" stroke-width="1">
-          <path d="M73,60 V340 M147,60 V340 M0,153 H220 M0,247 H220"/>
+        <rect width="220" height="400" fill="#0a0a0a"/>
+        <text x="160" y="21" fill="#fff" font-size="9" font-weight="600" text-anchor="middle" font-family="sans-serif">4:3</text>
+        <g transform="translate(180,10)">
+          <path d="M0,4 H3 L7,0.5 V13.5 L3,10 H0 Z" fill="#ff7a1a"/>
+          <path d="M10,4.5 q2.5,2.5 0,5" fill="none" stroke="#ff7a1a" stroke-width="1.4" stroke-linecap="round"/>
         </g>
-        <g stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"><path d="M86,200 H134"/></g>
-        <circle cx="110" cy="200" r="3.5" fill="#4ade80"/>
-        <rect x="34" y="76" width="152" height="26" rx="13" fill="#000" fill-opacity=".66"/>
-        <text x="110" y="93" fill="#fff" font-size="11.5" font-weight="600" text-anchor="middle" font-family="sans-serif">Ngồi xuống, hạ máy ngang eo</text>
-        <circle cx="110" cy="368" r="17" fill="none" stroke="#fff" stroke-width="2.6"/>
-        <circle cx="110" cy="368" r="12.5" fill="#fff" fill-opacity=".95"/>
+        <rect x="0" y="30" width="220" height="278" fill="#2c3330"/>
+        <g stroke="#ffffff" stroke-opacity=".2" stroke-width="1">
+          <path d="M73,30 V308 M147,30 V308 M0,123 H220 M0,215 H220"/>
+        </g>
+        <g stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"><path d="M86,169 H134"/></g>
+        <circle cx="110" cy="169" r="3.5" fill="#4ade80"/>
+        <rect x="34" y="44" width="152" height="26" rx="13" fill="#000" fill-opacity=".66"/>
+        <text x="110" y="61" fill="#fff" font-size="11.5" font-weight="600" text-anchor="middle" font-family="sans-serif">Ngồi xuống, hạ máy ngang eo</text>
+        <g font-size="8.5" letter-spacing="1" font-family="sans-serif">
+          <text x="20" y="333" fill="#ff7a1a" font-weight="700">CHÂN DUNG</text>
+          <text x="92" y="333" fill="#fff" fill-opacity=".5">CHẤM DÁNG</text>
+          <text x="166" y="333" fill="#fff" fill-opacity=".5">TỰ CHỤP</text>
+        </g>
+        <circle cx="110" cy="366" r="17" fill="none" stroke="#fff" stroke-width="2.6"/>
+        <circle cx="110" cy="366" r="12.5" fill="#fff" fill-opacity=".95"/>
+        <circle cx="168" cy="366" r="11" fill="#fff" fill-opacity=".12"/>
+        <g transform="translate(168,366)" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M-5,-1.6 a5,5 0 0 1 8.6,-1.6"/><path d="M5,1.6 a5,5 0 0 1 -8.6,1.6"/>
+          <path d="M1.4,-4.6 l2.2,1.4 -1.4,2.2"/><path d="M-1.4,4.6 l-2.2,-1.4 1.4,-2.2"/>
+        </g>
       </svg>
       <p>Khung hình còn lỗi — vòng nút chụp để trắng</p>
     </div>
 
     <div class="shot">
-      <svg viewBox="0 0 220 400" role="img" aria-label="Khung hình đạt, nút chụp chuyển xanh">
-        <rect width="220" height="400" fill="#141310"/>
-        <rect x="0" y="60" width="220" height="280" fill="#33403a"/>
-        <g stroke="#ffffff" stroke-opacity=".2" stroke-width="1">
-          <path d="M73,60 V340 M147,60 V340 M0,153 H220 M0,247 H220"/>
+      <svg viewBox="0 0 220 400" role="img" aria-label="Chế độ đồ vật, khung hình đạt, nút chụp chuyển xanh">
+        <rect width="220" height="400" fill="#0a0a0a"/>
+        <text x="160" y="21" fill="#fff" font-size="9" font-weight="600" text-anchor="middle" font-family="sans-serif">16:9</text>
+        <g transform="translate(182,10)">
+          <path d="M0,4 H3 L7,0.5 V13.5 L3,10 H0 Z" fill="#fff" fill-opacity=".5"/>
+          <path d="M9,3 L13,11 M13,3 L9,11" stroke="#fff" stroke-opacity=".5" stroke-width="1.4" stroke-linecap="round"/>
         </g>
-        <g stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"><path d="M86,200 H134"/></g>
-        <circle cx="110" cy="200" r="3.5" fill="#4ade80"/>
-        <circle cx="110" cy="368" r="17" fill="none" stroke="#4ade80" stroke-width="2.6"/>
-        <circle cx="110" cy="368" r="12.5" fill="#fff" fill-opacity=".95"/>
+        <rect x="0" y="42" width="220" height="248" fill="#33403a"/>
+        <g stroke="#ffffff" stroke-opacity=".2" stroke-width="1">
+          <path d="M73,42 V290 M147,42 V290 M0,125 H220 M0,207 H220"/>
+        </g>
+        <g stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"><path d="M78,166 H142"/></g>
+        <circle cx="110" cy="166" r="3.5" fill="#4ade80"/>
+        <g font-family="sans-serif">
+          <rect x="20" y="300" width="52" height="19" rx="9.5" fill="#000" fill-opacity=".4" stroke="#4ade80"/>
+          <text x="46" y="313.5" fill="#fff" font-size="8.5" text-anchor="middle">Chếch 45°</text>
+          <rect x="78" y="300" width="60" height="19" rx="9.5" fill="#000" fill-opacity=".4" stroke="#fff" stroke-opacity=".25"/>
+          <text x="108" y="313.5" fill="#fff" font-size="8.5" text-anchor="middle">Từ trên xuống</text>
+          <g font-size="8.5" letter-spacing="1">
+            <text x="20" y="340" fill="#fff" fill-opacity=".5">SỰ KIỆN</text>
+            <text x="76" y="340" fill="#fff" fill-opacity=".5">PHONG CẢNH</text>
+            <text x="160" y="340" fill="#ff7a1a" font-weight="700">ĐỒ VẬT</text>
+          </g>
+        </g>
+        <circle cx="110" cy="370" r="17" fill="none" stroke="#4ade80" stroke-width="2.6"/>
+        <circle cx="110" cy="370" r="12.5" fill="#fff" fill-opacity=".95"/>
+        <circle cx="168" cy="370" r="11" fill="#fff" fill-opacity=".12"/>
+        <g transform="translate(168,370)" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M-5,-1.6 a5,5 0 0 1 8.6,-1.6"/><path d="M5,1.6 a5,5 0 0 1 -8.6,1.6"/>
+          <path d="M1.4,-4.6 l2.2,1.4 -1.4,2.2"/><path d="M-1.4,4.6 l-2.2,-1.4 1.4,-2.2"/>
+        </g>
       </svg>
-      <p>Khung hình đạt — vòng chuyển xanh, và app im lặng</p>
+      <p>Khung hình đạt — vòng chuyển xanh, và app im lặng. Tuỳ chọn của chế độ nằm ngay trên hàng chọn chế độ.</p>
     </div>
 
     <div class="shot">
@@ -259,20 +301,20 @@
         <tr>
           <td><code>arm64-v8a</code></td>
           <td>Hầu hết điện thoại Android hiện nay</td>
-          <td>47,7 MB</td>
-          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.4-arm64-v8a.apk">Tải</a></td>
+          <td>47,9 MB</td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.5-arm64-v8a.apk">Tải</a></td>
         </tr>
         <tr>
           <td><code>armeabi-v7a</code></td>
           <td>Máy đời cũ, chip 32-bit</td>
-          <td>36,8 MB</td>
-          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.4-armeabi-v7a.apk">Tải</a></td>
+          <td>36,9 MB</td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.5-armeabi-v7a.apk">Tải</a></td>
         </tr>
         <tr>
           <td><code>x86_64</code></td>
           <td>Máy ảo và trình giả lập</td>
-          <td>36,6 MB</td>
-          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.4-x86_64.apk">Tải</a></td>
+          <td>36,8 MB</td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.5-x86_64.apk">Tải</a></td>
         </tr>
       </tbody>
     </table>
