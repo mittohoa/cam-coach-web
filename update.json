@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 6,
-  "versionName": "1.0.5",
+  "versionCode": 7,
+  "versionName": "1.0.6",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.5/cam-coach-1.0.5-arm64-v8a.apk",
-  "sizeBytes": 50263602,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.6/cam-coach-1.0.6-arm64-v8a.apk",
+  "sizeBytes": 50264018,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.5/cam-coach-1.0.5-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.5/cam-coach-1.0.5-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.5/cam-coach-1.0.5-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.6/cam-coach-1.0.6-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.6/cam-coach-1.0.6-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.6/cam-coach-1.0.6-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50263602,
-    "armeabi-v7a": 38737504,
-    "x86_64": 38577706
+    "arm64-v8a": 50264018,
+    "armeabi-v7a": 38754304,
+    "x86_64": 38578122
   },
 
   "mandatory": false,
-  "notes": "Giao diện dựng lại kiểu app camera: khung ngắm chiếm trọn màn hình, điều khiển gom xuống bảng dưới. Chọn được tỉ lệ 4:3 hoặc 16:9. Lời nhắc đọc thành tiếng ở mọi chế độ, tắt được ở thanh trên."
+  "notes": "Sửa lỗi đổi tỉ lệ khung làm preview đứng hình. App tự nhận chế độ theo cảnh trước mặt, chạm tên chế độ để chọn tay. Khung ngắm tràn hết bề ngang. Thêm tỉ lệ 4:5, 1:1, 2:3, 9:16, tràn màn hình và khung điện ảnh."
 }
