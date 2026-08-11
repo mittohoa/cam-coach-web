@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAM-Coach — Trợ lý chụp ảnh thời gian thực</title>
+<meta name="description" content="App camera nói cho bạn biết nên chỉnh gì ngay lúc còn đang giơ máy. Sáu chế độ chụp, chạy hoàn toàn trên máy, không gửi ảnh đi đâu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' fill='%2312100E'/%3E%3Cg fill='none' stroke='%23F5F3F0' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32,47 L32,32 L47,32'/%3E%3Cpath d='M61,32 L76,32 L76,47'/%3E%3Cpath d='M76,61 L76,76 L61,76'/%3E%3Cpath d='M47,76 L32,76 L32,61'/%3E%3C/g%3E%3Ccircle cx='61.3' cy='46.7' r='5.2' fill='%23FF7A1A'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0e0d0b; --panel:#16150f; --line:#26241d;
+    --ink:#f5f3f0; --muted:#a5a096;
+    --accent:#ff7a1a; --ok:#4ade80;
+    --max:1040px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+  a{color:var(--accent)}
+  h1,h2,h3{line-height:1.25; margin:0}
+  h2{font-size:clamp(22px,3.4vw,30px); margin-bottom:10px; letter-spacing:-.01em}
+  section{padding:56px 0; border-top:1px solid var(--line)}
+  .lead{color:var(--muted); max-width:62ch}
+
+  /* ---- hero ---- */
+  header{padding:64px 0 12px}
+  .brand{display:flex; align-items:center; gap:14px; margin-bottom:26px}
+  .brand svg{width:52px;height:52px;border-radius:13px;flex:none}
+  .brand b{font-size:19px; letter-spacing:.01em}
+  .tag{
+    display:inline-block; font-size:12px; color:var(--ok);
+    border:1px solid rgba(74,222,128,.35); border-radius:99px;
+    padding:3px 11px; margin-left:8px; vertical-align:3px; font-weight:600;
+  }
+  h1{font-size:clamp(30px,5.4vw,50px); letter-spacing:-.025em; max-width:19ch}
+  h1 em{font-style:normal; color:var(--accent)}
+  .sub{margin:20px 0 30px; font-size:clamp(16px,2vw,19px); color:var(--muted); max-width:56ch}
+  .cta{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+  .btn{
+    display:inline-block; background:var(--ok); color:#06120a; font-weight:700;
+    padding:13px 24px; border-radius:11px; text-decoration:none; font-size:15px;
+  }
+  .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line); font-weight:600}
+  .fine{font-size:13px; color:var(--muted)}
+
+  /* ---- generic grid ---- */
+  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); margin-top:26px}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:19px}
+  .card h3{font-size:16px; margin-bottom:7px}
+  .card p{margin:0; color:var(--muted); font-size:14.5px}
+  .card .k{font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent); font-weight:700; display:block; margin-bottom:9px}
+
+  /* ---- phone mockups ---- */
+  .shots{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); margin-top:28px}
+  .shot{text-align:center}
+  .shot svg{width:100%; max-width:220px; height:auto; border-radius:20px; border:1px solid var(--line)}
+  .shot p{color:var(--muted); font-size:13.5px; margin:11px 0 0}
+
+  /* ---- table ---- */
+  .tablewrap{overflow-x:auto; margin-top:22px}
+  table{border-collapse:collapse; width:100%; min-width:460px; font-size:14.5px}
+  th,td{text-align:left; padding:11px 13px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{color:var(--muted); font-weight:600; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase}
+  td code{font-size:13px; color:var(--accent)}
+
+  /* ---- steps ---- */
+  ol.steps{counter-reset:s; list-style:none; padding:0; margin:24px 0 0; display:grid; gap:13px}
+  ol.steps li{counter-increment:s; position:relative; padding-left:42px; color:var(--muted)}
+  ol.steps li::before{
+    content:counter(s); position:absolute; left:0; top:-1px; width:27px; height:27px;
+    border-radius:8px; background:var(--panel); border:1px solid var(--line);
+    color:var(--ink); font-weight:700; font-size:13px; display:grid; place-items:center;
+  }
+  ol.steps b{color:var(--ink); font-weight:600}
+
+  /* ---- faq ---- */
+  details{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:15px 18px; margin-top:11px}
+  summary{cursor:pointer; font-weight:600; font-size:15px}
+  details p{color:var(--muted); margin:11px 0 0; font-size:14.5px}
+
+  .note{border-left:2px solid var(--accent); padding:2px 0 2px 16px; color:var(--muted); margin-top:20px; font-size:14.5px}
+  footer{padding:44px 0 66px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
+  footer a{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="brand">
+    <svg viewBox="0 0 108 108" aria-hidden="true">
+      <rect width="108" height="108" fill="#12100E"/>
+      <g fill="none" stroke="#F5F3F0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32,47 L32,32 L47,32"/><path d="M61,32 L76,32 L76,47"/>
+        <path d="M76,61 L76,76 L61,76"/><path d="M47,76 L32,76 L32,61"/>
+      </g>
+      <circle cx="61.3" cy="46.7" r="5.2" fill="#FF7A1A"/>
+    </svg>
+    <b>CAM-Coach<span class="tag" id="ver">1.0.1 · thử nghiệm</span></b>
+  </div>
+
+  <h1>Nói cho bạn biết phải chỉnh gì, <em>trước khi</em> bấm máy.</h1>
+  <p class="sub">
+    Người mới chụp ảnh không thiếu thiết bị. Họ thiếu con mắt, và thiếu một người chỉ.
+    CAM-Coach nhìn khung hình bạn đang ngắm rồi nói ra đúng một câu làm được ngay.
+  </p>
+
+  <div class="cta">
+    <a class="btn" href="https://github.com/mittohoa/cam-coach-web/releases/latest">Tải APK cho Android</a>
+    <a class="btn ghost" href="#tai-ve">Chọn đúng bản cho máy</a>
+  </div>
+  <p class="fine" style="margin-top:16px">
+    Miễn phí · Không quảng cáo · Không tài khoản · Chạy được khi không có mạng
+  </p>
+</header>
+
+<section class="wrap">
+  <h2>Khác gì với các app chụp ảnh khác</h2>
+  <p class="lead">
+    Các app tạo dáng hiện có phủ một bóng mờ lên màn hình rồi để bạn tự căn bằng mắt.
+    Chúng chỉ nói chuyện với người mẫu, và không hề chấm đúng sai.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <span class="k">Vòng phản hồi</span>
+      <h3>Ra lệnh lúc chụp, giảng bài sau khi chụp</h3>
+      <p>Đang giơ máy thì chỉ một câu ngắn, làm được ngay. Lý do vì sao để dành cho màn hình xem lại — lúc đó bạn mới rảnh mà học.</p>
+    </div>
+    <div class="card">
+      <span class="k">Đúng một lỗi</span>
+      <h3>Không cằn nhằn</h3>
+      <p>Nhiều lỗi cùng lúc thì chỉ hiện cái nặng nhất. Và lời nhắc phải dai dẳng vài khung hình mới được xuất hiện, để không nhấp nháy theo tay bạn.</p>
+    </div>
+    <div class="card">
+      <span class="k">Cả hai vai</span>
+      <h3>Người cầm máy lẫn người làm mẫu</h3>
+      <p>Sửa khung hình cho người chụp, và chấm dáng cho người mẫu. App còn đưa sẵn câu để người chụp đọc to lên.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Sáu chế độ</h2>
+  <p class="lead">Mỗi chế độ nhìn vào những thứ khác nhau, vì lỗi của mỗi kiểu ảnh cũng khác nhau.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Chế độ</th><th>Bắt những lỗi gì</th></tr></thead>
+      <tbody>
+        <tr><td><b>Chân dung</b></td><td>Chừa quá nhiều khoảng trống trên đầu · cắt cụt ngay tại khớp · đứng quá sát làm méo mặt · chủ thể dính giữa khung · <b>máy cao quá làm chân ngắn</b></td></tr>
+        <tr><td><b>Chấm dáng</b></td><td>Đối chiếu dáng thật với dáng mẫu bằng góc khớp, rồi chỉ ra <b>đúng khớp nào đang sai</b>: “duỗi tay trái ra một chút”, “chùng gối phải xuống”</td></tr>
+        <tr><td><b>Tự chụp</b></td><td>Đọc lời nhắc thành tiếng qua loa · tự bấm khi khung hình đạt, đếm ngược 3 giây · giơ tay quá vai để chụp từ xa</td></tr>
+        <tr><td><b>Sự kiện</b></td><td>Có người nhắm mắt · có người bị che · mặt tối vì ngược sáng · hội trường thiếu sáng dễ rung tay</td></tr>
+        <tr><td><b>Phong cảnh</b></td><td>Chân trời xiên · chân trời cắt giữa khung · cháy trời mất chi tiết · thiếu tiền cảnh nên ảnh phẳng</td></tr>
+        <tr><td><b>Đồ vật</b></td><td>Ép đúng góc chuẩn — từ trên xuống hoặc chếch 45° · cảnh báo ánh sáng gắt tạo bóng đổ sắc lẹm</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Ba thứ đáng thử trước</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="k">Ảnh nhóm</span>
+      <h3>Chống nhắm mắt</h3>
+      <p>Một lần bấm là chụp năm tấm liên tiếp, chấm điểm mắt mở của <b>mọi</b> khuôn mặt rồi tự giữ tấm tốt nhất. Bạn không phải chọn, cũng không thấy bốn tấm kia.</p>
+    </div>
+    <div class="card">
+      <span class="k">Chân dung</span>
+      <h3>Chiều cao máy</h3>
+      <p>Đo tỉ lệ chân trên thân ngay trong ảnh. Máy cao hơn người là chân bị nén ngắn — app bảo bạn ngồi xuống, hạ máy ngang eo.</p>
+    </div>
+    <div class="card">
+      <span class="k">Đồ ăn</span>
+      <h3>Thước căn góc</h3>
+      <p>Người mới gần như luôn chụp ở một góc lửng lơ chừng 60°. Vạch trượt về giữa và chuyển xanh nghĩa là đã đúng góc chuẩn.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Trên màn hình trông như thế nào</h2>
+  <p class="lead">Giao diện cố ý để nhạt: nói xong điều cần nói rồi biến đi, không che mất khung hình bạn đang ngắm.</p>
+
+  <div class="shots">
+    <div class="shot">
+      <svg viewBox="0 0 220 400" role="img" aria-label="Chế độ chân dung với lời nhắc hạ máy">
+        <rect width="220" height="400" fill="#141310"/>
+        <rect x="0" y="60" width="220" height="280" fill="#2c3330"/>
+        <g stroke="#ffffff" stroke-opacity=".2" stroke-width="1">
+          <path d="M73,60 V340 M147,60 V340 M0,153 H220 M0,247 H220"/>
+        </g>
+        <g stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"><path d="M86,200 H134"/></g>
+        <circle cx="110" cy="200" r="3.5" fill="#4ade80"/>
+        <rect x="34" y="76" width="152" height="26" rx="13" fill="#000" fill-opacity=".66"/>
+        <text x="110" y="93" fill="#fff" font-size="11.5" font-weight="600" text-anchor="middle" font-family="sans-serif">Ngồi xuống, hạ máy ngang eo</text>
+        <circle cx="110" cy="368" r="17" fill="none" stroke="#fff" stroke-width="2.6"/>
+        <circle cx="110" cy="368" r="12.5" fill="#fff" fill-opacity=".95"/>
+      </svg>
+      <p>Khung hình còn lỗi — vòng nút chụp để trắng</p>
+    </div>
+
+    <div class="shot">
+      <svg viewBox="0 0 220 400" role="img" aria-label="Khung hình đạt, nút chụp chuyển xanh">
+        <rect width="220" height="400" fill="#141310"/>
+        <rect x="0" y="60" width="220" height="280" fill="#33403a"/>
+        <g stroke="#ffffff" stroke-opacity=".2" stroke-width="1">
+          <path d="M73,60 V340 M147,60 V340 M0,153 H220 M0,247 H220"/>
+        </g>
+        <g stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"><path d="M86,200 H134"/></g>
+        <circle cx="110" cy="200" r="3.5" fill="#4ade80"/>
+        <circle cx="110" cy="368" r="17" fill="none" stroke="#4ade80" stroke-width="2.6"/>
+        <circle cx="110" cy="368" r="12.5" fill="#fff" fill-opacity=".95"/>
+      </svg>
+      <p>Khung hình đạt — vòng chuyển xanh, và app im lặng</p>
+    </div>
+
+    <div class="shot">
+      <svg viewBox="0 0 220 400" role="img" aria-label="Màn hình xem lại với bài học">
+        <rect width="220" height="400" fill="#0a0a0a"/>
+        <rect x="30" y="26" width="160" height="200" rx="8" fill="#39423d"/>
+        <g transform="translate(24,250) scale(0.42)">
+          <g fill="none" stroke="#4ade80" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M32,47 L32,32 L47,32"/><path d="M61,32 L76,32 L76,47"/>
+            <path d="M76,61 L76,76 L61,76"/><path d="M47,76 L32,76 L32,61"/>
+          </g>
+          <path d="M42,50 a5,5 0 0 1 9,0" fill="none" stroke="#f5f3f0" stroke-width="4" stroke-linecap="round"/>
+          <path d="M57,50 a5,5 0 0 1 9,0" fill="none" stroke="#f5f3f0" stroke-width="4" stroke-linecap="round"/>
+          <path d="M47,62 q7,7 14,0" fill="none" stroke="#ff7a1a" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        <text x="70" y="264" fill="#fff" font-size="11.5" font-weight="600" font-family="sans-serif">Khung hình sạch</text>
+        <text x="70" y="281" fill="#a5a096" font-size="9.5" font-family="sans-serif">Không có lỗi nào đáng nói.</text>
+        <text x="70" y="294" fill="#a5a096" font-size="9.5" font-family="sans-serif">Cứ giữ cách chụp này.</text>
+        <rect x="30" y="330" width="52" height="34" rx="9" fill="#1b1a15"/>
+        <text x="56" y="352" fill="#8d887e" font-size="11" text-anchor="middle" font-family="sans-serif">Xoá</text>
+        <rect x="90" y="330" width="100" height="34" rx="9" fill="#4ade80"/>
+        <text x="140" y="352" fill="#06120a" font-size="11.5" font-weight="700" text-anchor="middle" font-family="sans-serif">Chụp tiếp</text>
+      </svg>
+      <p>Sau khi chụp mới giải thích tại sao</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="tai-ve">
+  <h2>Tải về</h2>
+  <p class="lead">
+    Không rõ máy mình loại nào thì tải bản <b>arm64-v8a</b> — gần như mọi điện thoại Android
+    từ 2018 trở lại đây đều dùng kiến trúc này.
+  </p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Bản</th><th>Dành cho</th><th>Dung lượng</th><th></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>arm64-v8a</code></td>
+          <td>Hầu hết điện thoại Android hiện nay</td>
+          <td>47,7 MB</td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.1-arm64-v8a.apk">Tải</a></td>
+        </tr>
+        <tr>
+          <td><code>armeabi-v7a</code></td>
+          <td>Máy đời cũ, chip 32-bit</td>
+          <td>36,7 MB</td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.1-armeabi-v7a.apk">Tải</a></td>
+        </tr>
+        <tr>
+          <td><code>x86_64</code></td>
+          <td>Máy ảo và trình giả lập</td>
+          <td>36,6 MB</td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.1-x86_64.apk">Tải</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note">
+    Cài xong rồi thì không phải quay lại trang này nữa. App tự kiểm tra bản mới mỗi lần mở,
+    tải nền và hỏi bạn có muốn cài không.
+  </p>
+</section>
+
+<section class="wrap">
+  <h2>Cài lần đầu</h2>
+  <ol class="steps">
+    <li>Tải file <b>.apk</b> ở trên về máy.</li>
+    <li>Mở file vừa tải. Android sẽ hỏi có cho phép cài ứng dụng từ nguồn này không — <b>đây là chuyện bình thường</b> với app chưa lên Google Play.</li>
+    <li>Bật công tắc cho <b>trình duyệt</b> hoặc <b>trình quản lý file</b> mà bạn dùng để mở, rồi quay lại.</li>
+    <li>Mở app và cho phép dùng <b>camera</b>. Vào thẳng màn hình chụp, không có màn hình chào.</li>
+    <li>Chọn chế độ ở góc màn hình, rồi chụp như bình thường. App sẽ tự lên tiếng khi thấy vấn đề.</li>
+  </ol>
+</section>
+
+<section class="wrap">
+  <h2>Thiết bị hỗ trợ</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Nền tảng</th><th>Tình trạng</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td><b>Android 7.0 trở lên</b></td><td style="color:var(--ok)">Đang hỗ trợ</td><td>Toàn bộ sáu chế độ. Máy càng mới thì nhận dạng dáng càng mượt.</td></tr>
+        <tr><td>Android 6 trở xuống</td><td style="color:var(--muted)">Không hỗ trợ</td><td>Thư viện nhận dạng dáng đòi Android 7 trở lên.</td></tr>
+        <tr><td>iPhone / iPad</td><td style="color:var(--muted)">Chưa có</td><td>Phần nhận dạng viết riêng cho Android; toàn bộ bộ luật thì dùng lại được nên cửa vẫn mở.</td></tr>
+        <tr><td>Windows</td><td style="color:var(--muted)">Chưa có</td><td>Chưa dựng. App bám vào camera và cảm biến nghiêng của điện thoại.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">
+    Một số tính năng phụ thuộc máy: <b>đọc lời nhắc thành tiếng</b> cần máy có sẵn giọng tiếng Việt,
+    còn <b>nhận dạng dáng</b> chạy nhanh hơn hẳn trên máy có GPU hỗ trợ.
+  </p>
+</section>
+
+<section class="wrap">
+  <h2>Quyền riêng tư</h2>
+  <p class="lead">
+    Toàn bộ xử lý diễn ra <b>trên máy của bạn</b>. Khung hình và ảnh không được gửi đi đâu cả,
+    không có máy chủ nào nhận dữ liệu, và app không có tài khoản để đăng nhập.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Quyền</th><th>Dùng để làm gì</th></tr></thead>
+      <tbody>
+        <tr><td><code>CAMERA</code></td><td>Hiển thị khung hình và phân tích bố cục. Frame không rời khỏi máy.</td></tr>
+        <tr><td><code>INTERNET</code></td><td>Đúng một việc: hỏi xem đã có bản cập nhật chưa, và tải bản đó về.</td></tr>
+        <tr><td><code>REQUEST_INSTALL_PACKAGES</code></td><td>Mở trình cài đặt cho bản cập nhật vừa tải. Bạn vẫn phải tự bấm xác nhận.</td></tr>
+        <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Chỉ trên Android 9 trở xuống, để lưu ảnh vào thư viện.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Ảnh bạn chụp được lưu vào <b>Pictures/CAM-Coach</b> trong thư viện của máy. Không có bản sao nào ở nơi khác.</p>
+</section>
+
+<section class="wrap">
+  <h2>Câu hỏi thường gặp</h2>
+
+  <details><summary>Vì sao Android cảnh báo khi cài?</summary>
+  <p>Vì app chưa lên Google Play. Android cảnh báo với mọi file APK cài ngoài cửa hàng, không phân biệt app đó là gì. Đây là bản thử nghiệm nên tạm thời phát hành theo cách này.</p></details>
+
+  <details><summary>App có gửi ảnh của tôi đi đâu không?</summary>
+  <p>Không. Mọi phân tích chạy trên máy, và app chỉ nối mạng để kiểm tra bản cập nhật. Chụp ở chế độ máy bay thì mọi tính năng chụp vẫn chạy bình thường.</p></details>
+
+  <details><summary>Vì sao app không tự chụp giúp tôi luôn?</summary>
+  <p>Nút chụp không bao giờ bị khoá — app chỉ nói ra điều nó thấy, còn quyết định là của bạn. Quy tắc là để biết trước khi phá; nhiều tấm ảnh đẹp nhất đến từ lúc không tính toán gì. Riêng chế độ Tự chụp thì có bấm hộ, vì lúc đó bạn đang đứng cách máy vài mét.</p></details>
+
+  <details><summary>Nó có làm đẹp, xoá mụn, làm trắng da không?</summary>
+  <p>Không, và cố ý không. App can thiệp trước khi bấm máy chứ không sửa ảnh sau đó. Mục tiêu là bạn chụp đẹp hơn, không phải ảnh được chỉnh nhiều hơn.</p></details>
+
+  <details><summary>Cập nhật thế nào?</summary>
+  <p>App tự kiểm tra mỗi lần mở. Có bản mới thì hiện thông báo, tải nền có thanh tiến độ, tải xong hỏi bạn có cài không. Bạn bấm “Để sau” thì quay lại chụp ngay, không bị chặn.</p></details>
+
+  <details><summary>Vì sao app đoán sai dáng của tôi?</summary>
+  <p>Thư viện dáng hiện dùng góc ước lượng bằng tay, chưa hiệu chỉnh bằng ảnh thật — đây vẫn là bản thử nghiệm. Các ngưỡng nhận diện cũng đang được chỉnh dần. Gặp trường hợp sai rõ ràng thì báo giúp qua email bên dưới.</p></details>
+</section>
+
+<footer class="wrap">
+  <p>
+    <b style="color:var(--ink)">CAM-Coach</b> — bản thử nghiệm 1.0.1 ·
+    Góp ý và báo lỗi: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>
+  </p>
+  <p style="margin-top:10px">
+    Mã nguồn của trang này và kênh phát hành ở
+    <a href="https://github.com/mittohoa/cam-coach-web">github.com/mittohoa/cam-coach-web</a>.
+    App dựng trên Flutter, CameraX, MediaPipe và ML Kit — mỗi thư viện theo giấy phép riêng của nó.
+  </p>
+</footer>
+
+</body>
+</html>
