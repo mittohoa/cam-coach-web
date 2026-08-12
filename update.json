@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 14,
-  "versionName": "1.3.1",
+  "versionCode": 15,
+  "versionName": "1.4.0",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.3.1/cam-coach-1.3.1-arm64-v8a.apk",
-  "sizeBytes": 50415956,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.4.0/cam-coach-1.4.0-arm64-v8a.apk",
+  "sizeBytes": 50416048,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.3.1/cam-coach-1.3.1-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.3.1/cam-coach-1.3.1-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.3.1/cam-coach-1.3.1-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.4.0/cam-coach-1.4.0-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.4.0/cam-coach-1.4.0-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.4.0/cam-coach-1.4.0-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50415956,
-    "armeabi-v7a": 38922626,
-    "x86_64": 38730060
+    "arm64-v8a": 50416048,
+    "armeabi-v7a": 38939102,
+    "x86_64": 38730152
   },
 
   "mandatory": false,
-  "notes": "Ba lỗi tìm ra khi chạy trên máy thật: khung ngắm giờ canh giữa màn hình thay vì treo ở mép trên; vuốt đổi tỉ lệ không còn chết khi đang bật chỉnh màu; zoom bớt khựng khi chụm ngón."
+  "notes": "Chế độ tập dáng: dựng chân máy hoặc đứng trước gương, chọn một dáng rồi tập — app chấm điểm liên tục và sửa, không chụp tấm nào. Và sửa lỗi cảnh báo zoom số im lặng trên máy một ống kính."
 }
