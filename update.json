@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 12,
-  "versionName": "1.2.0",
+  "versionCode": 13,
+  "versionName": "1.3.0",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.2.0/cam-coach-1.2.0-arm64-v8a.apk",
-  "sizeBytes": 50399484,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.3.0/cam-coach-1.3.0-arm64-v8a.apk",
+  "sizeBytes": 50415956,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.2.0/cam-coach-1.2.0-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.2.0/cam-coach-1.2.0-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.2.0/cam-coach-1.2.0-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.3.0/cam-coach-1.3.0-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.3.0/cam-coach-1.3.0-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.3.0/cam-coach-1.3.0-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50399484,
-    "armeabi-v7a": 38889770,
-    "x86_64": 38713588
+    "arm64-v8a": 50415956,
+    "armeabi-v7a": 38922626,
+    "x86_64": 38730060
   },
 
   "mandatory": false,
-  "notes": "Tám bộ chỉnh màu, chọn trước khi bấm chứ không phải sửa sau khi chụp. App tự gợi ý cái hợp với tình huống — nó đã biết đang chụp gì, mặt trời ở đâu, và ánh sáng đang ngả màu gì. Màu bạn thấy trên khung ngắm chính là màu được lưu."
+  "notes": "Boomerang: giữ nút chụp để quay một đoạn ngắn, app ghép thành ảnh động chạy tới chạy lui, lặp mãi. Gửi đi đâu cũng tự chạy."
 }
