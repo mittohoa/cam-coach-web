@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 17,
-  "versionName": "1.5.0",
+  "versionCode": 18,
+  "versionName": "1.5.1",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.0/cam-coach-1.5.0-arm64-v8a.apk",
-  "sizeBytes": 50481692,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.1/cam-coach-1.5.1-arm64-v8a.apk",
+  "sizeBytes": 50481832,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.0/cam-coach-1.5.0-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.0/cam-coach-1.5.0-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.0/cam-coach-1.5.0-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.1/cam-coach-1.5.1-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.1/cam-coach-1.5.1-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.1/cam-coach-1.5.1-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50481692,
-    "armeabi-v7a": 38955594,
-    "x86_64": 38795796
+    "arm64-v8a": 50481832,
+    "armeabi-v7a": 38955734,
+    "x86_64": 38795936
   },
 
   "mandatory": false,
-  "notes": "Chạm vào khung ngắm để lấy nét và đo sáng ngay tại đó. App vốn đã bảo bạn 'chạm vào mặt để đo sáng' từ lâu — giờ chạm mới thật sự có tác dụng."
+  "notes": "Chế độ Chấm dáng chụp loạt ba tấm nhưng không nhận diện khuôn mặt, nên không phân biệt được tấm nào có người chớp mắt. Đã sửa. Kèm ba con số của luật góc chụp và ánh sáng gắt nay chỉnh được từ file cấu hình."
 }
