@@ -1,20 +1,20 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 20,
-  "versionName": "1.6.1",
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.1/cam-coach-1.6.1-arm64-v8a.apk",
-  "sizeBytes": 50481944,
+  "versionCode": 21,
+  "versionName": "1.7.0",
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.0/cam-coach-1.7.0-arm64-v8a.apk",
+  "sizeBytes": 50482272,
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.1/cam-coach-1.6.1-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.1/cam-coach-1.6.1-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.1/cam-coach-1.6.1-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.0/cam-coach-1.7.0-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.0/cam-coach-1.7.0-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.0/cam-coach-1.7.0-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50481944,
-    "armeabi-v7a": 38955846,
-    "x86_64": 38796048
+    "arm64-v8a": 50482272,
+    "armeabi-v7a": 38972558,
+    "x86_64": 38796376
   },
   "mandatory": false,
-  "notes": "Sửa hai lỗi của thanh chỉnh sáng vừa ra ở 1.6.0. Cầm ngang thì thanh bị hàng nút che nên kéo không tới — nay nhảy sang mép trái. Và đổi tỉ lệ lúc đang khoá sáng thì dấu khoá cùng thanh không tự tắt, trong khi máy đã về tự động từ lâu."
+  "notes": "Đèn pin và đèn chớp — nút cơ bản cuối cùng app còn thiếu. Bốn nấc: tắt, tự động, đèn chớp, đèn pin; camera trước thì nấc bật là đèn màn hình. App biết đèn của chính nó đang bật nên đổi lời khuyên theo, và bật đèn chớp thì chỉ chụp một tấm thay vì chụp loạt."
 }
