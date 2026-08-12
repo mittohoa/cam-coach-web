@@ -1,24 +1,20 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-
-  "versionCode": 19,
-  "versionName": "1.6.0",
-
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.0/cam-coach-1.6.0-arm64-v8a.apk",
+  "versionCode": 20,
+  "versionName": "1.6.1",
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.1/cam-coach-1.6.1-arm64-v8a.apk",
   "sizeBytes": 50481944,
-
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.0/cam-coach-1.6.0-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.0/cam-coach-1.6.0-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.0/cam-coach-1.6.0-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.1/cam-coach-1.6.1-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.1/cam-coach-1.6.1-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.6.1/cam-coach-1.6.1-x86_64.apk"
   },
   "sizes": {
     "arm64-v8a": 50481944,
     "armeabi-v7a": 38955846,
     "x86_64": 38796048
   },
-
   "mandatory": false,
-  "notes": "Thanh chỉnh sáng. Chạm vào khung để khoá đo sáng, mép phải hiện thanh dọc kéo sáng lên xuống — kèm vạch mốc 0 và số EV. Khoảng bù hỏi thẳng từ máy nên đúng với từng đời máy; máy không hỗ trợ thì thanh không hiện."
+  "notes": "Sửa hai lỗi của thanh chỉnh sáng vừa ra ở 1.6.0. Cầm ngang thì thanh bị hàng nút che nên kéo không tới — nay nhảy sang mép trái. Và đổi tỉ lệ lúc đang khoá sáng thì dấu khoá cùng thanh không tự tắt, trong khi máy đã về tự động từ lâu."
 }
