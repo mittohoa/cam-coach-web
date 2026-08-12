@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 11,
-  "versionName": "1.1.0",
+  "versionCode": 12,
+  "versionName": "1.2.0",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.1.0/cam-coach-1.1.0-arm64-v8a.apk",
-  "sizeBytes": 50399368,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.2.0/cam-coach-1.2.0-arm64-v8a.apk",
+  "sizeBytes": 50399484,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.1.0/cam-coach-1.1.0-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.1.0/cam-coach-1.1.0-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.1.0/cam-coach-1.1.0-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.2.0/cam-coach-1.2.0-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.2.0/cam-coach-1.2.0-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.2.0/cam-coach-1.2.0-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50399368,
-    "armeabi-v7a": 38856886,
-    "x86_64": 38713472
+    "arm64-v8a": 50399484,
+    "armeabi-v7a": 38889770,
+    "x86_64": 38713588
   },
 
   "mandatory": false,
-  "notes": "Câu hô: app nhắc bạn nói gì với người mẫu, 84 câu rút từ tài liệu tạo dáng. Zoom bằng chụm hai ngón, kèm cảnh báo khi vượt zoom quang. Gợi ý xoay máy dọc hay ngang theo chủ thể. Giờ vàng và nắng đứng bóng — tuỳ chọn, cần quyền vị trí thô, tính tại chỗ."
+  "notes": "Tám bộ chỉnh màu, chọn trước khi bấm chứ không phải sửa sau khi chụp. App tự gợi ý cái hợp với tình huống — nó đã biết đang chụp gì, mặt trời ở đâu, và ánh sáng đang ngả màu gì. Màu bạn thấy trên khung ngắm chính là màu được lưu."
 }
