@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 10,
-  "versionName": "1.0.9",
+  "versionCode": 11,
+  "versionName": "1.1.0",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.9/cam-coach-1.0.9-arm64-v8a.apk",
-  "sizeBytes": 50396334,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.1.0/cam-coach-1.1.0-arm64-v8a.apk",
+  "sizeBytes": 50399368,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.9/cam-coach-1.0.9-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.9/cam-coach-1.0.9-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.9/cam-coach-1.0.9-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.1.0/cam-coach-1.1.0-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.1.0/cam-coach-1.1.0-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.1.0/cam-coach-1.1.0-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50396334,
-    "armeabi-v7a": 38804700,
-    "x86_64": 38644902
+    "arm64-v8a": 50399368,
+    "armeabi-v7a": 38856886,
+    "x86_64": 38713472
   },
 
   "mandatory": false,
-  "notes": "Nhận nhắm mắt làm lại từ gốc: app học mức mắt bình thường của riêng từng người rồi so với chính họ, thay vì so mọi người với cùng một con số. Mắt một mí và mắt nhỏ không còn bị vu oan, mà người mắt to nhắm hờ cũng không còn lọt."
+  "notes": "Câu hô: app nhắc bạn nói gì với người mẫu, 84 câu rút từ tài liệu tạo dáng. Zoom bằng chụm hai ngón, kèm cảnh báo khi vượt zoom quang. Gợi ý xoay máy dọc hay ngang theo chủ thể. Giờ vàng và nắng đứng bóng — tuỳ chọn, cần quyền vị trí thô, tính tại chỗ."
 }

@@ -99,7 +99,7 @@
       </g>
       <circle cx="61.3" cy="46.7" r="5.2" fill="#FF7A1A"/>
     </svg>
-    <b>CAM-Coach<span class="tag" id="ver">1.0.9 · thử nghiệm</span></b>
+    <b>CAM-Coach<span class="tag" id="ver">1.1.0 · thử nghiệm</span></b>
   </div>
 
   <h1>Nói cho bạn biết phải chỉnh gì, <em>trước khi</em> bấm máy.</h1>
@@ -137,7 +137,7 @@
     <div class="card">
       <span class="k">Cả hai vai</span>
       <h3>Người cầm máy lẫn người làm mẫu</h3>
-      <p>Sửa khung hình cho người chụp, và chấm dáng cho người mẫu. App còn đưa sẵn câu để người chụp đọc to lên.</p>
+      <p>Sửa khung hình cho người chụp, chấm dáng cho người mẫu. Và khi khung hình đã sạch, app nhắc bạn <b>nói gì</b> — "nhìn xa đi, đừng nhìn máy", "đi vài bước rồi ngoái lại". App không đọc thành tiếng: câu đó là để bạn nói.</p>
     </div>
   </div>
 </section>
@@ -356,19 +356,19 @@
           <td><code>arm64-v8a</code></td>
           <td>Hầu hết điện thoại Android hiện nay</td>
           <td>47,9 MB</td>
-          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.9-arm64-v8a.apk">Tải</a></td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.1.0-arm64-v8a.apk">Tải</a></td>
         </tr>
         <tr>
           <td><code>armeabi-v7a</code></td>
           <td>Máy đời cũ, chip 32-bit</td>
           <td>36,9 MB</td>
-          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.9-armeabi-v7a.apk">Tải</a></td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.1.0-armeabi-v7a.apk">Tải</a></td>
         </tr>
         <tr>
           <td><code>x86_64</code></td>
           <td>Máy ảo và trình giả lập</td>
           <td>36,8 MB</td>
-          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.0.9-x86_64.apk">Tải</a></td>
+          <td><a href="https://github.com/mittohoa/cam-coach-web/releases/latest/download/cam-coach-1.1.0-x86_64.apk">Tải</a></td>
         </tr>
       </tbody>
     </table>
@@ -424,10 +424,28 @@
         <tr><td><code>INTERNET</code></td><td>Đúng một việc: hỏi xem đã có bản cập nhật chưa, và tải bản đó về.</td></tr>
         <tr><td><code>REQUEST_INSTALL_PACKAGES</code></td><td>Mở trình cài đặt cho bản cập nhật vừa tải. Bạn vẫn phải tự bấm xác nhận.</td></tr>
         <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Chỉ trên Android 9 trở xuống, để lưu ảnh vào thư viện.</td></tr>
+        <tr><td><code>ACCESS_COARSE_LOCATION</code></td><td><b>Chỉ khi bạn tự bật</b> mục "Ánh sáng trong ngày". Xem giải thích ngay dưới bảng.</td></tr>
       </tbody>
     </table>
   </div>
   <p class="note">Ảnh bạn chụp được lưu vào <b>Pictures/CAM-Coach</b> trong thư viện của máy. Không có bản sao nào ở nơi khác.</p>
+
+  <h3 style="margin-top:28px">Về quyền vị trí</h3>
+  <p class="note">
+    App có một tính năng cần biết bạn đang ở đâu: tính xem mặt trời đang ở chỗ nào trên
+    bầu trời, để báo <b>giờ vàng</b>, <b>giờ xanh</b> và <b>nắng đứng bóng</b>. Đây là tính
+    năng duy nhất như vậy, và nó <b>mặc định tắt</b>.
+  </p>
+  <p class="note">
+    Bốn điều tự ràng buộc, và bạn kiểm chứng được bằng mã nguồn:
+  </p>
+  <ul class="steps">
+    <li><b>Không bao giờ tự xin.</b> App chỉ hỏi quyền đúng lúc bạn chạm vào mục "Ánh sáng trong ngày" trong bảng chọn chế độ. Không hỏi lúc khởi động, không hỏi lúc mở camera.</li>
+    <li><b>Quyền thô, không phải quyền chính xác.</b> Dịch đi vài trăm mét thì độ cao mặt trời đổi chưa tới một phần trăm độ — xin quyền chính xác là đòi thứ không dùng tới.</li>
+    <li><b>Đọc một lần, không theo dõi.</b> App chỉ hỏi vị trí cuối cùng mà hệ thống đã biết sẵn, không bật GPS chạy nền.</li>
+    <li><b>Không ra khỏi máy.</b> Toạ độ chạy thẳng vào một phép tính lượng giác rồi thôi. Không gửi mạng, không ghi ra đĩa. Cả tính năng này chạy được ở chế độ máy bay.</li>
+  </ul>
+  <p class="note">Tắt mục đó đi là app quên luôn toạ độ đã đọc.</p>
 </section>
 
 <section class="wrap">
