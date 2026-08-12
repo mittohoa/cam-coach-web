@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 7,
-  "versionName": "1.0.6",
+  "versionCode": 8,
+  "versionName": "1.0.7",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.6/cam-coach-1.0.6-arm64-v8a.apk",
-  "sizeBytes": 50264018,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.7/cam-coach-1.0.7-arm64-v8a.apk",
+  "sizeBytes": 50330658,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.6/cam-coach-1.0.6-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.6/cam-coach-1.0.6-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.6/cam-coach-1.0.6-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.7/cam-coach-1.0.7-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.7/cam-coach-1.0.7-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.0.7/cam-coach-1.0.7-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50264018,
-    "armeabi-v7a": 38754304,
-    "x86_64": 38578122
+    "arm64-v8a": 50330658,
+    "armeabi-v7a": 38788176,
+    "x86_64": 38644762
   },
 
   "mandatory": false,
-  "notes": "Sửa lỗi đổi tỉ lệ khung làm preview đứng hình. App tự nhận chế độ theo cảnh trước mặt, chạm tên chế độ để chọn tay. Khung ngắm tràn hết bề ngang. Thêm tỉ lệ 4:5, 1:1, 2:3, 9:16, tràn màn hình và khung điện ảnh."
+  "notes": "Chụp loạt giờ bày cả loạt ra cho bạn chọn, kèm một câu vì sao app khuyên tấm đó. Thư viện dáng thay bằng 10 dáng đo từ ảnh thật thay cho góc ước lượng bằng tay."
 }
