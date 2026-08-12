@@ -2,23 +2,23 @@
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
 
-  "versionCode": 16,
-  "versionName": "1.4.1",
+  "versionCode": 17,
+  "versionName": "1.5.0",
 
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.4.1/cam-coach-1.4.1-arm64-v8a.apk",
-  "sizeBytes": 50416048,
+  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.0/cam-coach-1.5.0-arm64-v8a.apk",
+  "sizeBytes": 50481692,
 
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.4.1/cam-coach-1.4.1-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.4.1/cam-coach-1.4.1-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.4.1/cam-coach-1.4.1-x86_64.apk"
+    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.0/cam-coach-1.5.0-arm64-v8a.apk",
+    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.0/cam-coach-1.5.0-armeabi-v7a.apk",
+    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.5.0/cam-coach-1.5.0-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50416048,
-    "armeabi-v7a": 38955486,
-    "x86_64": 38730152
+    "arm64-v8a": 50481692,
+    "armeabi-v7a": 38955594,
+    "x86_64": 38795796
   },
 
   "mandatory": false,
-  "notes": "Hai lỗi khung hình nữa: mặt bị tối vì ngược sáng khi chụp chân dung, và mép dưới cắt ngang cổ — cắt trên cằm thì được, cắt dưới vai thì được, riêng khoảng cổ thì không."
+  "notes": "Chạm vào khung ngắm để lấy nét và đo sáng ngay tại đó. App vốn đã bảo bạn 'chạm vào mặt để đo sáng' từ lâu — giờ chạm mới thật sự có tác dụng."
 }
