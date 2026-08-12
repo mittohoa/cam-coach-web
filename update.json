@@ -3,12 +3,12 @@
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
   "versionCode": 21,
   "versionName": "1.7.0",
-  "apkUrl": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.0/cam-coach-1.7.0-arm64-v8a.apk",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.0-arm64-v8a.apk",
   "sizeBytes": 50482272,
   "apks": {
-    "arm64-v8a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.0/cam-coach-1.7.0-arm64-v8a.apk",
-    "armeabi-v7a": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.0/cam-coach-1.7.0-armeabi-v7a.apk",
-    "x86_64": "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.0/cam-coach-1.7.0-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.0-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.0-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.0-x86_64.apk"
   },
   "sizes": {
     "arm64-v8a": 50482272,
@@ -16,5 +16,6 @@
     "x86_64": 38796376
   },
   "mandatory": false,
-  "notes": "Đèn pin và đèn chớp — nút cơ bản cuối cùng app còn thiếu. Bốn nấc: tắt, tự động, đèn chớp, đèn pin; camera trước thì nấc bật là đèn màn hình. App biết đèn của chính nó đang bật nên đổi lời khuyên theo, và bật đèn chớp thì chỉ chụp một tấm thay vì chụp loạt."
+  "notes": "Đèn pin và đèn chớp — nút cơ bản cuối cùng app còn thiếu. Bốn nấc: tắt, tự động, đèn chớp, đèn pin; camera trước thì nấc bật là đèn màn hình. App biết đèn của chính nó đang bật nên đổi lời khuyên theo, và bật đèn chớp thì chỉ chụp một tấm thay vì chụp loạt.",
+  "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc."
 }
