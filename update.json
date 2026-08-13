@@ -1,14 +1,14 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 23,
-  "versionName": "1.7.2",
-  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.2-arm64-v8a.apk",
+  "versionCode": 24,
+  "versionName": "1.7.3",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.3-arm64-v8a.apk",
   "sizeBytes": 50482272,
   "apks": {
-    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.2-arm64-v8a.apk",
-    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.2-armeabi-v7a.apk",
-    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.2-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.3-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.3-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.3-x86_64.apk"
   },
   "sizes": {
     "arm64-v8a": 50482272,
@@ -16,18 +16,18 @@
     "x86_64": 38796376
   },
   "mandatory": false,
-  "notes": "Sửa hai lỗi khi cầm máy nằm ngang. Hướng camera loạn: lật ngang thì giao diện xoay theo còn khung hình kẹt ở góc cũ, sai luôn cho tới khi lật về dọc — kéo theo cả tỉ lệ khung và chỗ chạm lấy nét đều sai. Và khung ngắm bị dán vào cạnh máy thay vì nằm giữa phần màn hình còn lại.",
+  "notes": "Sửa ba lỗi tìm ra khi cắm máy thật đo. Nặng nhất: ảnh động boomerang hỏng ở mọi trình xem ngay từ lúc ra mắt — ảnh động cũ không cứu được, phải quay lại. Kèm ảnh vuông không vuông (lệch 12 điểm ảnh), và nút Back thoát hẳn app thay vì đóng bảng đang mở, có thể làm mất tấm ảnh vừa chụp.",
   "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc.",
   "_mirrors": "Ban 1.7.1 tro di se thu lan luot tung dia chi. Ban cu hon chi doc apks nen chung phai tro vao host chay duoc.",
   "mirrors": {
     "arm64-v8a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.2/cam-coach-1.7.2-arm64-v8a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.3/cam-coach-1.7.3-arm64-v8a.apk"
     ],
     "armeabi-v7a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.2/cam-coach-1.7.2-armeabi-v7a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.3/cam-coach-1.7.3-armeabi-v7a.apk"
     ],
     "x86_64": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.2/cam-coach-1.7.2-x86_64.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.3/cam-coach-1.7.3-x86_64.apk"
     ]
   }
 }
