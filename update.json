@@ -1,33 +1,33 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 24,
-  "versionName": "1.7.3",
-  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.3-arm64-v8a.apk",
-  "sizeBytes": 50482272,
+  "versionCode": 25,
+  "versionName": "1.8.0",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.0-arm64-v8a.apk",
+  "sizeBytes": 50613508,
   "apks": {
-    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.3-arm64-v8a.apk",
-    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.3-armeabi-v7a.apk",
-    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.7.3-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.0-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.0-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.0-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50482272,
-    "armeabi-v7a": 38972558,
-    "x86_64": 38796376
+    "arm64-v8a": 50613508,
+    "armeabi-v7a": 39136562,
+    "x86_64": 38927612
   },
   "mandatory": false,
-  "notes": "Sửa ba lỗi tìm ra khi cắm máy thật đo. Nặng nhất: ảnh động boomerang hỏng ở mọi trình xem ngay từ lúc ra mắt — ảnh động cũ không cứu được, phải quay lại. Kèm ảnh vuông không vuông (lệch 12 điểm ảnh), và nút Back thoát hẳn app thay vì đóng bảng đang mở, có thể làm mất tấm ảnh vừa chụp.",
+  "notes": "Sửa một lỗi gốc: mỗi lần đổi tỉ lệ khung thì cả ba luồng camera tụt về tư thế cầm dọc, làm khung hình quay sai, lời khuyên tính sai trục, và ảnh chụp ghi sai hướng. Kèm sáu thứ mới: hẹn giờ, chụp bằng phím âm lượng, mở khoá ống góc rộng, vòng ngắm ở lại kèm thanh chỉnh sáng dựng cạnh nó, không còn đụng cử chỉ vuốt của Android, và mục Chuyên sâu với biểu đồ độ sáng cùng chỉnh tay ISO/tốc.",
   "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc.",
   "_mirrors": "Ban 1.7.1 tro di se thu lan luot tung dia chi. Ban cu hon chi doc apks nen chung phai tro vao host chay duoc.",
   "mirrors": {
     "arm64-v8a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.3/cam-coach-1.7.3-arm64-v8a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.0/cam-coach-1.8.0-arm64-v8a.apk"
     ],
     "armeabi-v7a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.3/cam-coach-1.7.3-armeabi-v7a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.0/cam-coach-1.8.0-armeabi-v7a.apk"
     ],
     "x86_64": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.7.3/cam-coach-1.7.3-x86_64.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.0/cam-coach-1.8.0-x86_64.apk"
     ]
   }
 }
