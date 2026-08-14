@@ -1,14 +1,14 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 30,
-  "versionName": "1.8.5",
-  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.5-arm64-v8a.apk",
+  "versionCode": 31,
+  "versionName": "1.8.6",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.6-arm64-v8a.apk",
   "sizeBytes": 50613584,
   "apks": {
-    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.5-arm64-v8a.apk",
-    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.5-armeabi-v7a.apk",
-    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.5-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.6-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.6-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.8.6-x86_64.apk"
   },
   "sizes": {
     "arm64-v8a": 50613584,
@@ -16,18 +16,18 @@
     "x86_64": 38927688
   },
   "mandatory": false,
-  "notes": "Thêm Tối mép: bốn nấc trong bảng Chỉnh màu, vùng sáng bám theo chỗ bạn chạm để lấy nét. Được nướng thẳng vào ảnh lúc lưu, đúng như trên khung ngắm.",
+  "notes": "Cầm dọc thì nút hẹn giờ không còn bị lỗ khoét camera che. Hàng nút trên cùng thiết kế lại: nút tròn chỉ có biểu tượng, gọn hơn và không bị chữ đẩy tràn.",
   "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc.",
   "_mirrors": "Ban 1.7.1 tro di se thu lan luot tung dia chi. Ban cu hon chi doc apks nen chung phai tro vao host chay duoc.",
   "mirrors": {
     "arm64-v8a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.5/cam-coach-1.8.5-arm64-v8a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.6/cam-coach-1.8.6-arm64-v8a.apk"
     ],
     "armeabi-v7a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.5/cam-coach-1.8.5-armeabi-v7a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.6/cam-coach-1.8.6-armeabi-v7a.apk"
     ],
     "x86_64": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.5/cam-coach-1.8.5-x86_64.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.8.6/cam-coach-1.8.6-x86_64.apk"
     ]
   }
 }
