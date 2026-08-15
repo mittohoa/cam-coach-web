@@ -1,33 +1,33 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 36,
-  "versionName": "1.9.1",
-  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.1-arm64-v8a.apk",
-  "sizeBytes": 50630004,
+  "versionCode": 37,
+  "versionName": "1.9.2",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-arm64-v8a.apk",
+  "sizeBytes": 50879680,
   "apks": {
-    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.1-arm64-v8a.apk",
-    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.1-armeabi-v7a.apk",
-    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.1-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50630004,
-    "armeabi-v7a": 39136674,
-    "x86_64": 38944108
+    "arm64-v8a": 50879680,
+    "armeabi-v7a": 39419118,
+    "x86_64": 39193784
   },
   "mandatory": false,
-  "notes": "Đổi tỉ lệ khung không còn làm ảnh phóng to. Trước đây cầm ngang mà chọn 9:16 là mọi vật to lên 33%, chọn Tràn là 62%, dù góc nhìn không hề rộng thêm. Đổi lại: khung dẹt sẽ có dải đen quanh nó.",
+  "notes": "Bản này chưa có gì nhìn thấy được. Nó mang sẵn phần nền cho tính năng xoá phông đang làm dở, nên tệp cài to hơn một chút. Chưa cần cập nhật nếu bạn đang dùng 1.9.1 bình thường.",
   "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc.",
   "_mirrors": "Ban 1.7.1 tro di se thu lan luot tung dia chi. Ban cu hon chi doc apks nen chung phai tro vao host chay duoc.",
   "mirrors": {
     "arm64-v8a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.1/cam-coach-1.9.1-arm64-v8a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.2/cam-coach-1.9.2-arm64-v8a.apk"
     ],
     "armeabi-v7a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.1/cam-coach-1.9.1-armeabi-v7a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.2/cam-coach-1.9.2-armeabi-v7a.apk"
     ],
     "x86_64": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.1/cam-coach-1.9.1-x86_64.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.2/cam-coach-1.9.2-x86_64.apk"
     ]
   }
 }
