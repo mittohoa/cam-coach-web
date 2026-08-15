@@ -1,33 +1,33 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 37,
-  "versionName": "1.9.2",
-  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-arm64-v8a.apk",
-  "sizeBytes": 50879680,
+  "versionCode": 38,
+  "versionName": "1.9.3",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.3-arm64-v8a.apk",
+  "sizeBytes": 65342404,
   "apks": {
-    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-arm64-v8a.apk",
-    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-armeabi-v7a.apk",
-    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.3-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.3-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.3-x86_64.apk"
   },
   "sizes": {
-    "arm64-v8a": 50879680,
-    "armeabi-v7a": 39419118,
-    "x86_64": 39193784
+    "arm64-v8a": 65342404,
+    "armeabi-v7a": 49747172,
+    "x86_64": 54784089
   },
   "mandatory": false,
-  "notes": "Bản này chưa có gì nhìn thấy được. Nó mang sẵn phần nền cho tính năng xoá phông đang làm dở, nên tệp cài to hơn một chút. Chưa cần cập nhật nếu bạn đang dùng 1.9.1 bình thường.",
+  "notes": "Chế độ Đồ vật giờ tự nhìn ra món bạn đang chụp: nó nhắc khi món quá nhỏ, khi món lệch khỏi giữa khung, và khi quanh món quá lộn xộn. Thêm hai nút hiệu ứng mới trong bảng chỉnh màu: xoá phông bốn nấc và hạt phim bốn nấc, cả hai đều được nướng thẳng vào ảnh lưu đúng như bạn thấy trên khung ngắm. Lưu ý: tệp cài to hơn hẳn (62 MB thay vì 48 MB) vì phần nhận dạng đồ vật mang sẵn model trong app, chạy được ngay cả khi không có mạng.",
   "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc.",
   "_mirrors": "Ban 1.7.1 tro di se thu lan luot tung dia chi. Ban cu hon chi doc apks nen chung phai tro vao host chay duoc.",
   "mirrors": {
     "arm64-v8a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.2/cam-coach-1.9.2-arm64-v8a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.3/cam-coach-1.9.3-arm64-v8a.apk"
     ],
     "armeabi-v7a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.2/cam-coach-1.9.2-armeabi-v7a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.3/cam-coach-1.9.3-armeabi-v7a.apk"
     ],
     "x86_64": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.2/cam-coach-1.9.2-x86_64.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.3/cam-coach-1.9.3-x86_64.apk"
     ]
   }
 }

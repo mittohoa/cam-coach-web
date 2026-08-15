@@ -99,7 +99,7 @@
       </g>
       <circle cx="61.3" cy="46.7" r="5.2" fill="#FF7A1A"/>
     </svg>
-    <b>CAM-Coach<span class="tag" id="ver">1.9.2 · thử nghiệm</span></b>
+    <b>CAM-Coach<span class="tag" id="ver">1.9.3 · thử nghiệm</span></b>
   </div>
 
   <h1>Nói cho bạn biết phải chỉnh gì, <em>trước khi</em> bấm máy.</h1>
@@ -109,7 +109,7 @@
   </p>
 
   <div class="cta">
-    <a class="btn" href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-arm64-v8a.apk">Tải APK cho Android</a>
+    <a class="btn" href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.3-arm64-v8a.apk">Tải APK cho Android</a>
     <a class="btn ghost" href="#tai-ve">Chọn đúng bản cho máy</a>
   </div>
   <p class="fine" style="margin-top:16px">
@@ -155,7 +155,7 @@
         <tr><td><b>Tự chụp</b></td><td>Tự bấm khi khung hình đạt, đếm ngược 3 giây · giơ tay quá vai để chụp từ xa · <b>cầm máy sát mặt làm mũi to ra</b></td></tr>
         <tr><td><b>Sự kiện</b></td><td>Có người nhắm mắt · có người nhìn đi chỗ khác · có người bị che · cả nhóm đứng quá xa · biểu cảm lệch nhịp · mặt tối vì ngược sáng · hội trường thiếu sáng dễ rung tay · <b>quá nửa nhóm đang cúi gằm</b></td></tr>
         <tr><td><b>Phong cảnh</b></td><td>Chân trời xiên · chân trời cắt giữa khung · cháy trời mất chi tiết · thiếu tiền cảnh nên ảnh phẳng</td></tr>
-        <tr><td><b>Đồ vật</b></td><td>Ép đúng góc chuẩn — từ trên xuống hoặc chếch 45° · cảnh báo ánh sáng gắt tạo bóng đổ sắc lẹm</td></tr>
+        <tr><td><b>Đồ vật</b></td><td>Ép đúng góc chuẩn — từ trên xuống hoặc chếch 45° · nhắc khi món quá nhỏ hoặc lệch khỏi giữa khung · cảnh báo nền lộn xộn quanh món và ánh sáng gắt tạo bóng đổ sắc lẹm</td></tr>
       </tbody>
     </table>
   </div>
@@ -379,20 +379,20 @@
         <tr>
           <td><code>arm64-v8a</code></td>
           <td>Hầu hết điện thoại Android hiện nay</td>
-          <td>47,9 MB</td>
-          <td><a href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-arm64-v8a.apk">Tải</a></td>
+          <td>62,3 MB</td>
+          <td><a href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.3-arm64-v8a.apk">Tải</a></td>
         </tr>
         <tr>
           <td><code>armeabi-v7a</code></td>
           <td>Máy đời cũ, chip 32-bit</td>
-          <td>36,9 MB</td>
-          <td><a href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-armeabi-v7a.apk">Tải</a></td>
+          <td>47,4 MB</td>
+          <td><a href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.3-armeabi-v7a.apk">Tải</a></td>
         </tr>
         <tr>
           <td><code>x86_64</code></td>
           <td>Máy ảo và trình giả lập</td>
-          <td>36,8 MB</td>
-          <td><a href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.2-x86_64.apk">Tải</a></td>
+          <td>52,2 MB</td>
+          <td><a href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.3-x86_64.apk">Tải</a></td>
         </tr>
       </tbody>
     </table>
@@ -509,6 +509,24 @@
     khung ngắm và tấm ảnh được vẽ bởi hai tầng khác nhau của máy. Phép chỉnh màu ở đây viết
     bằng đúng thứ mà cả hai tầng hiểu giống hệt nhau, và số liệu chỉ tính một lần rồi gửi
     sang — không bên nào tính lại.
+  </p>
+
+  <h3>Ba hiệu ứng nằm chung bảng</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Hiệu ứng</th><th>Làm gì</th></tr></thead>
+      <tbody>
+        <tr><td><b>Tối mép</b></td><td>Làm tối bốn góc để mắt dồn vào giữa. Vùng sáng <b>bám theo chỗ bạn chạm để lấy nét</b>, nên nó ôm lấy chủ thể chứ không cứ nằm giữa khung</td></tr>
+        <tr><td><b>Xoá phông</b></td><td>Làm mờ hậu cảnh, chừa người ra — giống chụp bằng ống chân dung mở lớn. Bốn nấc. Tốn pin hơn vì máy phải tách người khỏi nền liên tục, nên mặc định tắt</td></tr>
+        <tr><td><b>Hạt phim</b></td><td>Thêm hạt như phim nhựa. Bốn nấc. Hợp ảnh đen trắng, ảnh chụp đêm, và những mảng phẳng lì như trời hay tường</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">
+    Cả ba đều được <b>nướng thẳng vào ảnh lưu</b> đúng như bạn thấy trên khung ngắm, không
+    phải một lớp xem trước rồi lưu ra khác. Riêng xoá phông thì gần đúng chứ không khớp
+    từng điểm ảnh — hai tầng của máy dùng hai phép làm mờ khác nhau, và chỗ đó thì nói
+    thẳng còn hơn hứa suông.
   </p>
 </section>
 
