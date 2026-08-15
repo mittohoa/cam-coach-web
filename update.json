@@ -1,33 +1,33 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 39,
-  "versionName": "1.9.4",
-  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.4-arm64-v8a.apk",
+  "versionCode": 40,
+  "versionName": "1.9.5",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.5-arm64-v8a.apk",
   "sizeBytes": 65342404,
   "apks": {
-    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.4-arm64-v8a.apk",
-    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.4-armeabi-v7a.apk",
-    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.4-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.5-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.5-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.9.5-x86_64.apk"
   },
   "sizes": {
     "arm64-v8a": 65342404,
-    "armeabi-v7a": 49763556,
+    "armeabi-v7a": 49779940,
     "x86_64": 54784089
   },
   "mandatory": false,
-  "notes": "Chụp bằng ống góc siêu rộng 0.5× giờ được nhắc hai chuyện mà nhìn khung ngắm không thấy được: người đứng sát mép khung sẽ bị kéo méo, và ống này thu sáng kém hơn ống chính nên trời hơi tối thì về 1× sẽ được tấm sạch hơn. Riêng chế độ Tự chụp thì không nhắc chuyện méo — selfie 0.5 lấy chính sự biến dạng làm phong cách, đó là ý đồ chứ không phải lỗi.",
+  "notes": "Bảng chỉnh màu được dựng lại cho nhanh tay hơn hẳn: tám bộ màu giờ nằm trên một dải trượt ngang, còn tối mép, hạt phim và xoá phông mỗi thứ gọn một dòng bốn nấc — không còn phải cuộn. Quan trọng hơn: khung ngắm **không còn bị làm tối** trong lúc bạn chọn, và bảng không tự đóng nữa, nên chạm tới đâu thấy ngay tới đó. Thử ba bộ màu trước đây mất chín lần chạm và vuốt, giờ còn bốn. Bảng tỉ lệ khung hình cũng vậy.",
   "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc.",
   "_mirrors": "Ban 1.7.1 tro di se thu lan luot tung dia chi. Ban cu hon chi doc apks nen chung phai tro vao host chay duoc.",
   "mirrors": {
     "arm64-v8a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.4/cam-coach-1.9.4-arm64-v8a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.5/cam-coach-1.9.5-arm64-v8a.apk"
     ],
     "armeabi-v7a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.4/cam-coach-1.9.4-armeabi-v7a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.5/cam-coach-1.9.5-armeabi-v7a.apk"
     ],
     "x86_64": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.4/cam-coach-1.9.4-x86_64.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.9.5/cam-coach-1.9.5-x86_64.apk"
     ]
   }
 }
