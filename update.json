@@ -1,14 +1,14 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 45,
-  "versionName": "1.10.0",
-  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.0-arm64-v8a.apk",
+  "versionCode": 46,
+  "versionName": "1.10.1",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.1-arm64-v8a.apk",
   "sizeBytes": 65408308,
   "apks": {
-    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.0-arm64-v8a.apk",
-    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.0-armeabi-v7a.apk",
-    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.0-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.1-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.1-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.1-x86_64.apk"
   },
   "sizes": {
     "arm64-v8a": 65408308,
@@ -16,18 +16,18 @@
     "x86_64": 54849993
   },
   "mandatory": false,
-  "notes": "**Chồng khung** — một cơ chế, ba kỹ thuật mà trước nay phải có máy ảnh và chân máy mới làm được. Bấm một lần, giữ máy yên vài giây, app chụp nhiều khung rồi chồng lại:\n\n· **Vệt sáng** — vệt đèn xe ban đêm, vệt sao\n· **Mượt** — nước chảy và mây kéo thành dải mượt, ảnh cũng sạch nhiễu hơn hẳn\n· **Vắng người** — người đi ngang tự biến mất, ra cảnh vắng tanh giữa chỗ đông\n\n**Chồng hình thêm hai nấc**: *Đậm nhạt* để quyết tấm nào là chính, và *Vùng chồng* để tấm hai chỉ hiện **trong bóng người** hoặc **ngoài bóng người** — kiểu ảnh phơi sáng kép kinh điển, thay vì chồng trọn hai cảnh lên nhau thành một mớ.",
+  "notes": "**Sửa lỗi chồng hình cứ hiện lại tấm đầu tiên.** Tên tệp kết quả bị trùng nhau mỗi lần chụp, nên màn xem lại đọc mãi một tệp cũ. Chồng khung cũng dính y hệt.\n\n**Loang sáng (Black Mist)** — kính lọc khuếch tán làm bằng phần mềm. Đèn nở thành quầng, da bớt gắt, ảnh mềm hẳn mà vẫn nét nguyên. Bốn nấc, nằm trong bảng hiệu ứng.\n\n**Chồng khung nhắc trước nếu máy đang rung**, thay vì báo sau khi đã chụp xong — với một tính năng bắt đứng yên sáu giây thì báo muộn là vô dụng.",
   "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc.",
   "_mirrors": "Ban 1.7.1 tro di se thu lan luot tung dia chi. Ban cu hon chi doc apks nen chung phai tro vao host chay duoc.",
   "mirrors": {
     "arm64-v8a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.0/cam-coach-1.10.0-arm64-v8a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.1/cam-coach-1.10.1-arm64-v8a.apk"
     ],
     "armeabi-v7a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.0/cam-coach-1.10.0-armeabi-v7a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.1/cam-coach-1.10.1-armeabi-v7a.apk"
     ],
     "x86_64": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.0/cam-coach-1.10.0-x86_64.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.1/cam-coach-1.10.1-x86_64.apk"
     ]
   }
 }
