@@ -1,14 +1,14 @@
 {
   "_": "App đọc file này để biết đã có bản mới chưa. So sánh bằng versionCode, không so bằng versionName — so chuỗi thì 1.10.0 nhỏ hơn 1.9.0.",
   "_apkUrl": "Giữ lại cho những bản app phát hành trước 1.0.2 — chúng chỉ biết đọc trường này. Bỏ đi là các máy đó kẹt vĩnh viễn không cập nhật được.",
-  "versionCode": 47,
-  "versionName": "1.10.2",
-  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.2-arm64-v8a.apk",
+  "versionCode": 48,
+  "versionName": "1.10.3",
+  "apkUrl": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.3-arm64-v8a.apk",
   "sizeBytes": 65408308,
   "apks": {
-    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.2-arm64-v8a.apk",
-    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.2-armeabi-v7a.apk",
-    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.2-x86_64.apk"
+    "arm64-v8a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.3-arm64-v8a.apk",
+    "armeabi-v7a": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.3-armeabi-v7a.apk",
+    "x86_64": "https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.3-x86_64.apk"
   },
   "sizes": {
     "arm64-v8a": 65408308,
@@ -16,18 +16,18 @@
     "x86_64": 54849993
   },
   "mandatory": false,
-  "notes": "**Tự lấy nét vào mắt.** Trước đây phải chạm tay, mà ảnh chân dung nét vào bức tường phía sau thì hỏng ở chỗ căn bản nhất — hậu kỳ không cứu được. Bạn vẫn chạm để khoá nét bình thường; khoá rồi thì app không đụng tới nữa.\n\n**Hai bộ màu mới**: *Điện ảnh* để bóng ngả xanh và vùng sáng ngả cam — bảng màu phim chiếu rạp, và nó tách người khỏi nền mà không cần xoá phông; và *Xanh đêm* — duotone hai tông xanh thẫm và kem ấm.\n\nCả hai bộ màu này **khớp từng điểm ảnh** giữa khung ngắm và ảnh lưu.",
+  "notes": "**Bản vá lỗi, không có tính năng mới.**\n\nSửa văng app trên Galaxy S24 FE khi bật xoá phông hoặc vùng chồng “Trong người”.\n\nSửa văng app khi đổi chế độ lúc có người vào/ra khung.\n\nMàn xem lại giờ hiện đúng cả xoá phông và loang sáng — trước đây nó hiện ảnh nét cho một tấm sắp lưu mờ.\n\nSửa mất hiệu ứng loang sáng khi chụp chồng phơi sáng.",
   "_host": "APK nam o nhanh apk va phuc vu qua raw.githubusercontent.com, khong phai qua Releases. Ly do: mang o Viet Nam dang chan github.com, ma URL tai cua Releases bat dau tu chinh host do nen chet ngay buoc dau — app bao \"connection closed before full header\". raw.githubusercontent.com chay tren Fastly va qua duoc.",
   "_mirrors": "Ban 1.7.1 tro di se thu lan luot tung dia chi. Ban cu hon chi doc apks nen chung phai tro vao host chay duoc.",
   "mirrors": {
     "arm64-v8a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.2/cam-coach-1.10.2-arm64-v8a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.3/cam-coach-1.10.3-arm64-v8a.apk"
     ],
     "armeabi-v7a": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.2/cam-coach-1.10.2-armeabi-v7a.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.3/cam-coach-1.10.3-armeabi-v7a.apk"
     ],
     "x86_64": [
-      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.2/cam-coach-1.10.2-x86_64.apk"
+      "https://github.com/mittohoa/cam-coach-web/releases/download/v1.10.3/cam-coach-1.10.3-x86_64.apk"
     ]
   }
 }
