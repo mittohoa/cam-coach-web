@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư — CAM-Coach</title>
+<meta name="description" content="CAM-Coach xử lý mọi khung hình ngay trên máy của bạn. Ảnh không rời khỏi điện thoại, không có máy chủ nào nhận dữ liệu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' fill='%2312100E'/%3E%3Cg fill='none' stroke='%23F5F3F0' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32,47 L32,32 L47,32'/%3E%3Cpath d='M61,32 L76,32 L76,47'/%3E%3Cpath d='M76,61 L76,76 L61,76'/%3E%3Cpath d='M47,76 L32,76 L32,61'/%3E%3C/g%3E%3Ccircle cx='61.3' cy='46.7' r='5.2' fill='%23FF7A1A'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0e0d0b; --panel:#16150f; --line:#26241d;
+    --ink:#f5f3f0; --muted:#a5a096;
+    --accent:#ff7a1a; --ok:#4ade80;
+    --max:1040px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+  a{color:var(--accent)}
+  h1,h2,h3{line-height:1.25; margin:0}
+  h2{font-size:clamp(22px,3.4vw,30px); margin-bottom:10px; letter-spacing:-.01em}
+  section{padding:56px 0; border-top:1px solid var(--line)}
+  .lead{color:var(--muted); max-width:62ch}
+
+  /* ---- hero ---- */
+  header{padding:64px 0 12px}
+  .brand{display:flex; align-items:center; gap:14px; margin-bottom:26px}
+  .brand svg{width:52px;height:52px;border-radius:13px;flex:none}
+  .brand b{font-size:19px; letter-spacing:.01em}
+  .tag{
+    display:inline-block; font-size:12px; color:var(--ok);
+    border:1px solid rgba(74,222,128,.35); border-radius:99px;
+    padding:3px 11px; margin-left:8px; vertical-align:3px; font-weight:600;
+  }
+  h1{font-size:clamp(30px,5.4vw,50px); letter-spacing:-.025em; max-width:19ch}
+  h1 em{font-style:normal; color:var(--accent)}
+  .sub{margin:20px 0 30px; font-size:clamp(16px,2vw,19px); color:var(--muted); max-width:56ch}
+  .cta{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+  .btn{
+    display:inline-block; background:var(--ok); color:#06120a; font-weight:700;
+    padding:13px 24px; border-radius:11px; text-decoration:none; font-size:15px;
+  }
+  .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line); font-weight:600}
+  .fine{font-size:13px; color:var(--muted)}
+
+  /* ---- generic grid ---- */
+  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); margin-top:26px}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:19px}
+  .card h3{font-size:16px; margin-bottom:7px}
+  .card p{margin:0; color:var(--muted); font-size:14.5px}
+  .card .k{font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent); font-weight:700; display:block; margin-bottom:9px}
+
+  /* ---- phone mockups ---- */
+  .shots{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); margin-top:28px}
+  .shot{text-align:center}
+  .shot svg{width:100%; max-width:220px; height:auto; border-radius:20px; border:1px solid var(--line)}
+  .shot p{color:var(--muted); font-size:13.5px; margin:11px 0 0}
+
+  /* ---- table ---- */
+  .tablewrap{overflow-x:auto; margin-top:22px}
+  table{border-collapse:collapse; width:100%; min-width:460px; font-size:14.5px}
+  th,td{text-align:left; padding:11px 13px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{color:var(--muted); font-weight:600; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase}
+  td code{font-size:13px; color:var(--accent)}
+
+  /* ---- steps ---- */
+  ol.steps{counter-reset:s; list-style:none; padding:0; margin:24px 0 0; display:grid; gap:13px}
+  ol.steps li{counter-increment:s; position:relative; padding-left:42px; color:var(--muted)}
+  ol.steps li::before{
+    content:counter(s); position:absolute; left:0; top:-1px; width:27px; height:27px;
+    border-radius:8px; background:var(--panel); border:1px solid var(--line);
+    color:var(--ink); font-weight:700; font-size:13px; display:grid; place-items:center;
+  }
+  ol.steps b{color:var(--ink); font-weight:600}
+
+  /* ---- faq ---- */
+  details{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:15px 18px; margin-top:11px}
+  summary{cursor:pointer; font-weight:600; font-size:15px}
+  details p{color:var(--muted); margin:11px 0 0; font-size:14.5px}
+
+  .note{border-left:2px solid var(--accent); padding:2px 0 2px 16px; color:var(--muted); margin-top:20px; font-size:14.5px}
+  footer{padding:44px 0 66px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
+  footer a{color:var(--ink)}
+</style>
+<style>
+  .doc h2{font-size:clamp(19px,2.6vw,24px); margin:0 0 10px}
+  .doc p, .doc li{color:var(--muted)}
+  .doc p{max-width:70ch}
+  .doc ul{padding-left:20px; margin:12px 0}
+  .doc li{margin:7px 0; max-width:68ch}
+  .doc b{color:var(--ink)}
+  .doc section{padding:34px 0}
+  .doc section:first-of-type{border-top:none; padding-top:6px}
+  .stamp{font-size:13.5px; color:var(--muted); margin-top:4px; line-height:1.7}
+  .big{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--ok);
+       border-radius:12px; padding:19px 21px; margin:26px 0 4px}
+  .big p{margin:0; color:var(--muted); max-width:74ch}
+  .back{display:inline-block; margin-bottom:22px; font-size:14px; text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="wrap" style="padding:42px 0 0">
+  <a class="back" href="./">&larr; CAM-Coach</a>
+  <div class="brand">
+    <svg viewBox="0 0 108 108" aria-hidden="true">
+      <rect width="108" height="108" fill="#12100E"/>
+      <g fill="none" stroke="#F5F3F0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32,47 L32,32 L47,32"/><path d="M61,32 L76,32 L76,47"/>
+        <path d="M76,61 L76,76 L61,76"/><path d="M47,76 L32,76 L32,61"/>
+      </g>
+      <circle cx="61.3" cy="46.7" r="5.2" fill="#FF7A1A"/>
+    </svg>
+    <b>Chính sách quyền riêng tư</b>
+  </div>
+  <p class="stamp">
+    Áp dụng cho ứng dụng <b style="color:var(--ink)">CAM-Coach</b>
+    (<code style="color:var(--accent)">com.mittohoa.cam_coach</code>) trên Android.<br>
+    Có hiệu lực từ 20/08/2026 · Cập nhật lần cuối 20/08/2026
+  </p>
+  <div class="big">
+    <p><b style="color:var(--ink)">Tóm tắt trong ba câu.</b>
+    CAM-Coach phân tích khung hình ngay trên máy của bạn — ảnh, khuôn mặt và dáng
+    người không rời khỏi điện thoại, và chúng tôi không có máy chủ nào để nhận chúng.
+    Chúng tôi không thu thập tên, email, danh bạ hay vị trí của bạn.
+    Thứ duy nhất ra khỏi máy là số liệu hiệu năng ẩn danh do thư viện nhận dạng của
+    Google tự gửi về Google — mục 4 nói rõ nó là gì.</p>
+  </div>
+</header>
+
+<div class="wrap doc">
+
+<section>
+  <h2>1. Ai chịu trách nhiệm</h2>
+  <p>CAM-Coach là phần mềm do cá nhân phát triển. Mọi câu hỏi về quyền riêng tư xin gửi
+  tới <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>; chúng tôi trả lời trong
+  vòng 30 ngày.</p>
+</section>
+
+<section>
+  <h2>2. Nguyên tắc: xử lý trên máy</h2>
+  <p>CAM-Coach là một trợ lý chụp ảnh. Để nói cho bạn biết nên chỉnh gì, nó phải nhìn
+  khung hình bạn đang ngắm — nhận ra khuôn mặt, dáng người, đường chân trời, độ sáng.</p>
+  <p>Toàn bộ việc nhìn ấy diễn ra <b>trên chính điện thoại của bạn</b>. Các mô hình nhận
+  dạng nằm sẵn trong tệp cài đặt, không tải về từ đâu và không gửi gì đi đâu. Bật chế độ
+  máy bay thì mọi tính năng chụp vẫn chạy đủ.</p>
+  <p>Hệ quả là chúng tôi <b>không thể</b> xem ảnh của bạn, kể cả khi muốn. Không có máy
+  chủ, không có tài khoản, không có cơ sở dữ liệu người dùng.</p>
+</section>
+
+<section>
+  <h2>3. Dữ liệu app KHÔNG thu thập</h2>
+  <ul>
+    <li><b>Ảnh và video.</b> Không tải lên, không sao lưu, không phân tích ở nơi khác.</li>
+    <li><b>Khuôn mặt.</b> App đo khuôn mặt để biết mắt có nhắm không và đầu có nghiêng
+        không. Số đo dùng xong là bỏ, không lưu, không tạo hồ sơ nhận dạng ai cả.</li>
+    <li><b>Thông tin cá nhân.</b> Không hỏi tên, email, số điện thoại, ngày sinh.</li>
+    <li><b>Danh bạ, tin nhắn, lịch, sức khoẻ, thông tin tài chính.</b> Không đụng tới.</li>
+    <li><b>Mã định danh quảng cáo.</b> App không có quảng cáo và không đọc mã quảng cáo
+        của thiết bị.</li>
+    <li><b>Âm thanh.</b> App không có quyền ghi âm. Ảnh động boomerang không có tiếng.</li>
+    <li><b>Thư viện ảnh của bạn.</b> App không đọc album. Nó chỉ ghi thêm vào những tấm
+        chính nó vừa chụp và bạn đã bấm giữ.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>4. Thứ duy nhất ra khỏi máy</h2>
+  <p>CAM-Coach dùng thư viện nhận dạng <b>Google ML Kit</b> để tìm khuôn mặt và đồ vật
+  trong khung hình. Theo điều khoản của Google, thư viện này <b>tự gửi số liệu về hiệu
+  năng và mức sử dụng của chính nó về Google</b>, và Google không cung cấp cách để tắt.</p>
+  <p>Số liệu ấy nói về <b>thư viện</b>, không về <b>nội dung</b>: phiên bản thư viện, kiểu
+  máy, thời gian xử lý một khung hình, lỗi xảy ra. Nó <b>không</b> chứa ảnh, không chứa
+  khuôn mặt, không chứa vị trí, và không gắn với danh tính của bạn.</p>
+  <p>Google xử lý số liệu này theo
+  <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>.
+  Chúng tôi nêu điều này ra vì chính điều khoản ML Kit yêu cầu phải nói, và vì bạn có
+  quyền biết mọi thứ rời khỏi máy mình.</p>
+  <p>Ngoài ML Kit, phiên bản trên Google Play <b>không tự gọi ra mạng lần nào</b>.</p>
+</section>
+
+<section>
+  <h2>5. Quyền truy cập, và vì sao cần từng cái</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Quyền</th><th>Xin lúc nào</th><th>Để làm gì</th></tr></thead>
+      <tbody>
+        <tr><td><code>CAMERA</code></td><td>Lần mở đầu tiên</td>
+            <td>Hiện khung ngắm và phân tích bố cục. Khung hình không rời khỏi máy.</td></tr>
+        <tr><td><code>ACCESS_COARSE_LOCATION</code></td>
+            <td><b>Chỉ khi bạn tự bật</b> mục “Ánh sáng trong ngày”</td>
+            <td>Tính độ cao mặt trời để báo giờ vàng, giờ xanh, nắng đứng bóng. Xem mục 6.</td></tr>
+        <tr><td><code>INTERNET</code></td><td>Không phải xin</td>
+            <td>Bản Play: chỉ để thư viện của Google gửi số liệu ở mục 4.
+                Bản APK: thêm việc kiểm tra bản cập nhật.</td></tr>
+        <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td>
+            <td>Khi bạn bấm giữ ảnh, chỉ trên Android 9 trở xuống</td>
+            <td>Ghi ảnh vào thư viện của máy. Android 10 trở lên không cần quyền này.</td></tr>
+        <tr><td><code>REQUEST_INSTALL_PACKAGES</code></td>
+            <td><b>Chỉ có ở bản tải APK</b>, không có ở bản Google Play</td>
+            <td>Mở trình cài đặt của hệ thống cho bản cập nhật vừa tải. Bạn vẫn phải tự bấm
+                xác nhận.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:16px">App không xin quyền vị trí chính xác, không xin vị trí chạy
+  nền, không xin quyền đọc thư viện ảnh, không xin quyền ghi âm.</p>
+</section>
+
+<section>
+  <h2>6. Về quyền vị trí</h2>
+  <p>App có đúng một tính năng cần biết bạn đang ở đâu: tính xem mặt trời đang ở chỗ nào
+  trên bầu trời. Tính năng ấy <b>mặc định tắt</b>, và bốn điều sau là ràng buộc trong mã
+  nguồn chứ không phải lời hứa:</p>
+  <ul>
+    <li><b>Không bao giờ tự xin.</b> App chỉ hỏi quyền đúng lúc bạn chạm vào mục “Ánh sáng
+        trong ngày”. Không hỏi lúc khởi động, không hỏi lúc mở camera.</li>
+    <li><b>Quyền thô, không phải quyền chính xác.</b> Dịch đi vài trăm mét thì độ cao mặt
+        trời đổi chưa tới một phần trăm độ.</li>
+    <li><b>Đọc một lần, không theo dõi.</b> App hỏi vị trí gần nhất mà hệ thống đã biết
+        sẵn, không bật GPS chạy nền.</li>
+    <li><b>Không ra khỏi máy.</b> Toạ độ chạy thẳng vào một phép tính lượng giác rồi thôi.
+        Không gửi đi, không ghi ra đĩa. Tính năng này chạy được ở chế độ máy bay.</li>
+  </ul>
+  <p>Tắt mục đó đi là app quên luôn toạ độ đã đọc.</p>
+</section>
+
+<section>
+  <h2>7. Ảnh của bạn được lưu ở đâu</h2>
+  <ul>
+    <li>Lúc bấm máy, ảnh ghi vào <b>thư mục riêng của app</b> — nơi không ứng dụng nào
+        khác đọc được.</li>
+    <li>Chỉ khi bạn bấm <b>Giữ</b> ở màn xem lại, ảnh mới được chép sang thư viện của máy,
+        vào thư mục <b>Pictures/CAM-Coach</b>. Từ đó nó là ảnh của bạn, do bạn quản lý.</li>
+    <li>Ảnh bạn không giữ sẽ bị xoá khỏi thư mục tạm ở lần mở camera kế tiếp.</li>
+    <li>Gỡ app là mọi thứ trong thư mục riêng mất theo. Ảnh đã bấm giữ thì ở lại thư viện,
+        vì lúc đó chúng đã là ảnh của máy chứ không của app.</li>
+  </ul>
+  <p>App <b>không lưu cài đặt</b>: không có cơ sở dữ liệu, không có tệp thiết lập. Đóng
+  app là mọi lựa chọn về mặc định.</p>
+</section>
+
+<section>
+  <h2>8. Đọc lời nhắc thành tiếng</h2>
+  <p>Khi bạn bật âm thanh gợi ý (mặc định tắt), câu nhắc được chuyển cho <b>bộ đọc văn
+  bản của hệ điều hành</b> — cùng bộ đọc mà các app khác trên máy bạn dùng. Nếu bạn đã
+  chọn một giọng đọc chạy trên máy chủ, câu nhắc ấy sẽ đi qua bộ đọc đó theo chính sách
+  của nhà cung cấp giọng, chứ không qua chúng tôi. Chọn giọng ngoại tuyến thì mọi thứ ở
+  lại trên máy.</p>
+</section>
+
+<section>
+  <h2>9. Trẻ em</h2>
+  <p>CAM-Coach không nhắm tới trẻ em dưới 13 tuổi và không thu thập dữ liệu nào gắn với
+  danh tính người dùng, ở mọi lứa tuổi.</p>
+</section>
+
+<section>
+  <h2>10. Quyền của bạn</h2>
+  <ul>
+    <li><b>Thu hồi quyền bất cứ lúc nào</b> trong Cài đặt &rarr; Ứng dụng &rarr; CAM-Coach
+        &rarr; Quyền. Thu hồi quyền camera thì app không chụp được nữa; thu hồi quyền vị trí
+        thì mục “Ánh sáng trong ngày” tắt, phần còn lại chạy như thường.</li>
+    <li><b>Xoá dữ liệu:</b> gỡ app là xong. Chúng tôi không giữ bản sao nào để mà xoá hộ,
+        vì chúng tôi chưa từng nhận được gì.</li>
+    <li><b>Hỏi bất cứ điều gì</b> qua
+        <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>11. Thay đổi chính sách</h2>
+  <p>Chính sách này sẽ được cập nhật nếu app thay đổi cách xử lý dữ liệu. Ngày cập
+  nhật luôn nằm ở đầu trang. Thay đổi có ảnh hưởng thật sẽ được nói rõ trong phần ghi
+  chú của bản phát hành tương ứng.</p>
+</section>
+
+</div>
+
+<footer class="wrap">
+  <p><b style="color:var(--ink)">CAM-Coach</b> ·
+     <a href="./">Trang giới thiệu</a> ·
+     <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a></p>
+</footer>
+
+</body>
+</html>

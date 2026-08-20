@@ -82,6 +82,22 @@
   summary{cursor:pointer; font-weight:600; font-size:15px}
   details p{color:var(--muted); margin:11px 0 0; font-size:14.5px}
 
+  /* ---- duong len Google Play ---- */
+  .play{
+    display:inline-flex; align-items:center; gap:11px; background:var(--ink); color:#0e0d0b;
+    padding:11px 20px 11px 16px; border-radius:11px; text-decoration:none; font-weight:700; font-size:15px;
+  }
+  .play svg{width:22px;height:22px;flex:none}
+  .play.soon{background:transparent; color:var(--muted); border:1px dashed var(--line); cursor:default; font-weight:600}
+  .play.soon svg{opacity:.45}
+  .channels{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); margin-top:24px}
+  .chan{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px}
+  .chan.lead-chan{border-color:rgba(74,222,128,.4)}
+  .chan h3{font-size:17px; margin-bottom:6px}
+  .chan p{color:var(--muted); font-size:14.5px; margin:0 0 15px}
+  .chan .k{font-size:11px; letter-spacing:.09em; text-transform:uppercase; font-weight:700; display:block; margin-bottom:9px; color:var(--accent)}
+  .chan.lead-chan .k{color:var(--ok)}
+
   .note{border-left:2px solid var(--accent); padding:2px 0 2px 16px; color:var(--muted); margin-top:20px; font-size:14.5px}
   footer{padding:44px 0 66px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
   footer a{color:var(--ink)}
@@ -109,11 +125,19 @@
   </p>
 
   <div class="cta">
-    <a class="btn" href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.3-arm64-v8a.apk">Tải APK cho Android</a>
-    <a class="btn ghost" href="#tai-ve">Chọn đúng bản cho máy</a>
+    <!--
+      LEN KE ROI THI SUA O DAY, va o muc #tai-ve.
+      Doi <span class="play soon"> ... </span> thanh:
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.mittohoa.cam_coach">
+        (giu nguyen phan ben trong) </a>
+      roi xoa dong <p class="fine"> ngay duoi no.
+    -->
+    <span class="play soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D2FF" d="M3.6 1.8a1.5 1.5 0 0 0-.6 1.2v18a1.5 1.5 0 0 0 .6 1.2l10-10.2z"/><path fill="#FFCE00" d="M17.7 8.5 13.6 12l4.1 3.5 3.1-1.8c.9-.5.9-1.9 0-2.4z"/><path fill="#00F076" d="M3.6 1.8 13.6 12l4.1-3.5L5.4 1.4c-.6-.4-1.3-.3-1.8.4z"/><path fill="#FF3A44" d="M3.6 22.2c.5.7 1.2.8 1.8.4l12.3-7.1L13.6 12z"/></svg><span>Google Play — đang chờ duyệt</span></span>
+    <a class="btn ghost" href="#tai-ve">Tải bản thử nghiệm (APK)</a>
   </div>
   <p class="fine" style="margin-top:16px">
-    Miễn phí · Không quảng cáo · Không tài khoản · Chạy được khi không có mạng
+    Miễn phí · Không quảng cáo · Không tài khoản · Chạy được khi không có mạng ·
+    <a href="privacy.html">Quyền riêng tư</a>
   </p>
 </header>
 
@@ -383,6 +407,33 @@
 <section class="wrap" id="tai-ve">
   <h2>Tải về</h2>
   <p class="lead">
+    Có hai đường, và chúng chạy song song: bản trên cửa hàng dành cho người dùng bình
+    thường, bản APK dành cho ai muốn thử tính năng mới sớm hơn.
+  </p>
+
+  <div class="channels">
+    <div class="chan lead-chan">
+      <span class="k">Nên dùng</span>
+      <h3>Google Play</h3>
+      <p>
+        Cài một chạm, tự cập nhật, không phải bật công tắc cho phép nào cả.
+        Bản trên cửa hàng <b>không tự tải bản cập nhật</b> — chính Play lo việc đó.
+      </p>
+      <span class="play soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D2FF" d="M3.6 1.8a1.5 1.5 0 0 0-.6 1.2v18a1.5 1.5 0 0 0 .6 1.2l10-10.2z"/><path fill="#FFCE00" d="M17.7 8.5 13.6 12l4.1 3.5 3.1-1.8c.9-.5.9-1.9 0-2.4z"/><path fill="#00F076" d="M3.6 1.8 13.6 12l4.1-3.5L5.4 1.4c-.6-.4-1.3-.3-1.8.4z"/><path fill="#FF3A44" d="M3.6 22.2c.5.7 1.2.8 1.8.4l12.3-7.1L13.6 12z"/></svg><span>Đang chờ Google duyệt</span></span>
+    </div>
+
+    <div class="chan">
+      <span class="k">Bản thử nghiệm</span>
+      <h3>Tệp APK</h3>
+      <p>
+        Có tính năng mới sớm hơn, đổi lại phải tự cho phép cài ngoài cửa hàng, và app
+        tự đi tìm bản cập nhật thay cho Play.
+      </p>
+      <a class="btn" href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.3-arm64-v8a.apk">Tải bản arm64-v8a</a>
+    </div>
+  </div>
+
+  <p class="lead" style="margin-top:30px">
     Không rõ máy mình loại nào thì tải bản <b>arm64-v8a</b> — gần như mọi điện thoại Android
     từ 2018 trở lại đây đều dùng kiến trúc này.
   </p>
@@ -405,7 +456,8 @@
         </tr>
         <tr>
           <td><code>x86_64</code></td>
-          <td>Máy ảo và trình giả lập</td>
+          <td>Máy ảo và trình giả lập. <b>Không có phần nhận dạng dáng</b> —
+              thư viện bộ xương không đóng gói cho kiến trúc này.</td>
           <td>52,3 MB</td>
           <td><a href="https://raw.githubusercontent.com/mittohoa/cam-coach-web/apk/cam-coach-1.10.3-x86_64.apk">Tải</a></td>
         </tr>
@@ -414,8 +466,9 @@
   </div>
 
   <p class="note">
-    Cài xong rồi thì không phải quay lại trang này nữa. App tự kiểm tra bản mới mỗi lần mở,
-    tải nền và hỏi bạn có muốn cài không.
+    Cài <b>bản APK</b> xong rồi thì không phải quay lại trang này nữa: app tự kiểm tra bản
+    mới mỗi lần mở, tải nền và hỏi bạn có muốn cài không. <b>Bản Google Play không làm
+    việc đó</b> — cửa hàng lo, và chính sách của Play cũng không cho app tự cài.
   </p>
 </section>
 
@@ -460,14 +513,28 @@
       <thead><tr><th>Quyền</th><th>Dùng để làm gì</th></tr></thead>
       <tbody>
         <tr><td><code>CAMERA</code></td><td>Hiển thị khung hình và phân tích bố cục. Frame không rời khỏi máy.</td></tr>
-        <tr><td><code>INTERNET</code></td><td>Đúng một việc: hỏi xem đã có bản cập nhật chưa, và tải bản đó về.</td></tr>
-        <tr><td><code>REQUEST_INSTALL_PACKAGES</code></td><td>Mở trình cài đặt cho bản cập nhật vừa tải. Bạn vẫn phải tự bấm xác nhận.</td></tr>
+        <tr><td><code>INTERNET</code></td><td><b>Bản Google Play:</b> app không tự gọi ra mạng lần nào — chỉ thư viện nhận dạng của Google gửi số liệu hiệu năng, xem ngay dưới. <b>Bản APK:</b> thêm việc hỏi xem đã có bản cập nhật chưa.</td></tr>
+        <tr><td><code>REQUEST_INSTALL_PACKAGES</code><br><span style="color:var(--muted);font-size:12.5px">chỉ có ở bản APK</span></td><td>Mở trình cài đặt cho bản cập nhật vừa tải. Bạn vẫn phải tự bấm xác nhận. Bản trên Google Play <b>không có quyền này</b>.</td></tr>
         <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Chỉ trên Android 9 trở xuống, để lưu ảnh vào thư viện.</td></tr>
         <tr><td><code>ACCESS_COARSE_LOCATION</code></td><td><b>Chỉ khi bạn tự bật</b> mục "Ánh sáng trong ngày". Xem giải thích ngay dưới bảng.</td></tr>
       </tbody>
     </table>
   </div>
   <p class="note">Ảnh bạn chụp được lưu vào <b>Pictures/CAM-Coach</b> trong thư viện của máy. Không có bản sao nào ở nơi khác.</p>
+
+  <h3 style="margin-top:28px">Thứ duy nhất ra khỏi máy</h3>
+  <p class="note">
+    Nói cho đủ, vì “không gửi gì đi đâu” mà nói trơn thì không đúng hẳn. App dùng thư viện
+    nhận dạng <b>Google ML Kit</b> để tìm khuôn mặt và đồ vật, và thư viện ấy <b>tự gửi số
+    liệu hiệu năng của chính nó về Google</b> — phiên bản thư viện, kiểu máy, thời gian xử
+    lý một khung hình, lỗi xảy ra. Google không cung cấp cách tắt, và chính điều khoản của
+    họ yêu cầu chúng tôi phải nói ra điều này.
+  </p>
+  <p class="note">
+    Số liệu ấy nói về <b>thư viện</b>, không về <b>nội dung</b>: không có ảnh, không có
+    khuôn mặt, không có toạ độ, không gắn với danh tính bạn. Ngoài nó ra, bản trên Google
+    Play không tự gọi ra mạng lần nào.
+  </p>
 
   <h3 style="margin-top:28px">Về quyền vị trí</h3>
   <p class="note">
@@ -485,6 +552,10 @@
     <li><b>Không ra khỏi máy.</b> Toạ độ chạy thẳng vào một phép tính lượng giác rồi thôi. Không gửi mạng, không ghi ra đĩa. Cả tính năng này chạy được ở chế độ máy bay.</li>
   </ul>
   <p class="note">Tắt mục đó đi là app quên luôn toạ độ đã đọc.</p>
+
+  <p style="margin-top:26px">
+    <a class="btn ghost" href="privacy.html">Đọc chính sách quyền riêng tư đầy đủ →</a>
+  </p>
 </section>
 
 <section class="wrap">
@@ -631,10 +702,13 @@
   <h2>Câu hỏi thường gặp</h2>
 
   <details><summary>Vì sao Android cảnh báo khi cài?</summary>
-  <p>Vì app chưa lên Google Play. Android cảnh báo với mọi file APK cài ngoài cửa hàng, không phân biệt app đó là gì. Đây là bản thử nghiệm nên tạm thời phát hành theo cách này.</p></details>
+  <p>Vì bạn đang cài <b>tệp APK</b> chứ không cài từ cửa hàng. Android cảnh báo với mọi file APK cài ngoài cửa hàng, không phân biệt app đó là gì. Cài từ Google Play thì không có bước này.</p></details>
+
+  <details><summary>Bản Google Play và bản APK khác nhau chỗ nào?</summary>
+  <p>Cùng một app, khác đúng một chỗ: bản APK <b>tự đi tìm bản cập nhật</b> vì không có ai báo cho bạn biết là có bản mới, còn bản Play thì để cửa hàng lo — chính sách của Play cũng cấm app tự cài bản cập nhật. Vì vậy bản Play không xin quyền <code>REQUEST_INSTALL_PACKAGES</code>. Mọi tính năng chụp thì giống hệt nhau.</p></details>
 
   <details><summary>App có gửi ảnh của tôi đi đâu không?</summary>
-  <p>Không. Mọi phân tích chạy trên máy, và app chỉ nối mạng để kiểm tra bản cập nhật. Chụp ở chế độ máy bay thì mọi tính năng chụp vẫn chạy bình thường.</p></details>
+  <p>Không. Mọi phân tích chạy trên máy, và chúng tôi không có máy chủ nào để nhận ảnh. Chụp ở chế độ máy bay thì mọi tính năng chụp vẫn chạy bình thường. Thứ duy nhất ra khỏi máy là số liệu hiệu năng ẩn danh của thư viện nhận dạng Google — <a href="privacy.html">mục 4 của chính sách quyền riêng tư</a> nói rõ nó gồm những gì.</p></details>
 
   <details><summary>Vì sao app không tự chụp giúp tôi luôn?</summary>
   <p>Nút chụp không bao giờ bị khoá — app chỉ nói ra điều nó thấy, còn quyết định là của bạn. Quy tắc là để biết trước khi phá; nhiều tấm ảnh đẹp nhất đến từ lúc không tính toán gì. Riêng chế độ Tự chụp thì có bấm hộ, vì lúc đó bạn đang đứng cách máy vài mét.</p></details>
@@ -643,7 +717,7 @@
   <p>Không, và cố ý không. App can thiệp trước khi bấm máy chứ không sửa ảnh sau đó. Mục tiêu là bạn chụp đẹp hơn, không phải ảnh được chỉnh nhiều hơn.</p></details>
 
   <details><summary>Cập nhật thế nào?</summary>
-  <p>App tự kiểm tra mỗi lần mở. Có bản mới thì hiện thông báo, tải nền có thanh tiến độ, tải xong hỏi bạn có cài không. Bạn bấm “Để sau” thì quay lại chụp ngay, không bị chặn.</p></details>
+  <p><b>Bản Google Play:</b> cửa hàng tự lo, như mọi app khác. <b>Bản APK:</b> app tự kiểm tra mỗi lần mở — có bản mới thì hiện thông báo, tải nền có thanh tiến độ, tải xong hỏi bạn có cài không. Bấm “Để sau” thì quay lại chụp ngay, không bị chặn.</p></details>
 
   <details><summary>Vì sao app đoán sai dáng của tôi?</summary>
   <p>Thư viện dáng hiện dùng góc ước lượng bằng tay, chưa hiệu chỉnh bằng ảnh thật — đây vẫn là bản thử nghiệm. Các ngưỡng nhận diện cũng đang được chỉnh dần. Gặp trường hợp sai rõ ràng thì báo giúp qua email bên dưới.</p></details>
@@ -651,7 +725,8 @@
 
 <footer class="wrap">
   <p>
-    <b style="color:var(--ink)">CAM-Coach</b> — bản thử nghiệm 1.0.1 ·
+    <b style="color:var(--ink)">CAM-Coach</b> — bản 1.10.3 ·
+    <a href="privacy.html">Chính sách quyền riêng tư</a> ·
     Góp ý và báo lỗi: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>
   </p>
   <p style="margin-top:10px">
