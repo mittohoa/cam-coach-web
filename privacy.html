@@ -120,7 +120,7 @@
   <p class="stamp">
     Áp dụng cho ứng dụng <b style="color:var(--ink)">CAM-Coach</b>
     (<code style="color:var(--accent)">com.mittohoa.cam_coach</code>) trên Android.<br>
-    Có hiệu lực từ 20/08/2026 · Cập nhật lần cuối 20/08/2026
+    Có hiệu lực từ 20/08/2026 · Cập nhật lần cuối 07/10/2026
   </p>
   <div class="big">
     <p><b style="color:var(--ink)">Tóm tắt trong ba câu.</b>
@@ -162,7 +162,9 @@
     <li><b>Danh bạ, tin nhắn, lịch, sức khoẻ, thông tin tài chính.</b> Không đụng tới.</li>
     <li><b>Mã định danh quảng cáo.</b> App không có quảng cáo và không đọc mã quảng cáo
         của thiết bị.</li>
-    <li><b>Âm thanh.</b> App không có quyền ghi âm. Ảnh động boomerang không có tiếng.</li>
+    <li><b>Âm thanh.</b> Từ bản 1.12 app có chế độ quay phim và thu tiếng vào <b>chính
+        tệp phim trên máy bạn</b>. Tiếng ấy không được gửi đi đâu, không được phân tích,
+        và app không giữ bản ghi nào khác. Xem mục 5a. Ảnh động boomerang không có tiếng.</li>
     <li><b>Thư viện ảnh của bạn.</b> App không đọc album. Nó chỉ ghi thêm vào những tấm
         chính nó vừa chụp và bạn đã bấm giữ.</li>
   </ul>
@@ -180,7 +182,13 @@
   <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>.
   Chúng tôi nêu điều này ra vì chính điều khoản ML Kit yêu cầu phải nói, và vì bạn có
   quyền biết mọi thứ rời khỏi máy mình.</p>
-  <p>Ngoài ML Kit, phiên bản trên Google Play <b>không tự gọi ra mạng lần nào</b>.</p>
+  <p>Ngoài ML Kit, phiên bản trên Google Play <b>không tự gọi ra mạng</b>. Có đúng một
+  trường hợp app gọi mạng, và chỉ khi <b>chính bạn bấm</b>: nút “Tải thêm” trong thư viện
+  bảng màu của chế độ Phim (từ bản 1.13). Lúc ấy app tải danh mục và các tệp bảng màu từ
+  trang <code>mittohoa.github.io/cam-coach-web</code>. Yêu cầu tải không kèm thông tin nào
+  về bạn hay về máy ngoài những gì mọi lần tải tệp trên mạng đều có (địa chỉ IP, do
+  GitHub — nơi đặt trang — ghi nhận theo chính sách của họ). App không tải mã chạy, chỉ
+  tải bảng số màu, và kiểm từng tệp trước khi dùng.</p>
 </section>
 
 <section>
@@ -194,9 +202,12 @@
         <tr><td><code>ACCESS_COARSE_LOCATION</code></td>
             <td><b>Chỉ khi bạn tự bật</b> mục “Ánh sáng trong ngày”</td>
             <td>Tính độ cao mặt trời để báo giờ vàng, giờ xanh, nắng đứng bóng. Xem mục 6.</td></tr>
+        <tr><td><code>RECORD_AUDIO</code></td>
+            <td><b>Chỉ khi bạn tự chuyển sang chế độ Phim</b>, lần đầu</td>
+            <td>Thu tiếng vào tệp phim, và hiện đồng hồ mức âm. Xem mục 5a.</td></tr>
         <tr><td><code>INTERNET</code></td><td>Không phải xin</td>
-            <td>Bản Play: chỉ để thư viện của Google gửi số liệu ở mục 4.
-                Bản APK: thêm việc kiểm tra bản cập nhật.</td></tr>
+            <td>Bản Play: để thư viện của Google gửi số liệu ở mục 4, và để tải bảng
+                màu khi bạn bấm “Tải thêm”. Bản APK: thêm việc kiểm tra bản cập nhật.</td></tr>
         <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td>
             <td>Khi bạn bấm giữ ảnh, chỉ trên Android 9 trở xuống</td>
             <td>Ghi ảnh vào thư viện của máy. Android 10 trở lên không cần quyền này.</td></tr>
@@ -208,7 +219,23 @@
     </table>
   </div>
   <p style="margin-top:16px">App không xin quyền vị trí chính xác, không xin vị trí chạy
-  nền, không xin quyền đọc thư viện ảnh, không xin quyền ghi âm.</p>
+  nền, không xin quyền đọc thư viện ảnh.</p>
+</section>
+
+<section>
+  <h2>5a. Về quyền micro</h2>
+  <ul>
+    <li><b>Chỉ hỏi khi bạn vào chế độ Phim.</b> Chụp ảnh không bao giờ dùng micro, và
+        app không hỏi quyền này lúc khởi động.</li>
+    <li><b>Dùng cho đúng hai việc.</b> Thu tiếng vào tệp phim bạn đang quay, và hiện
+        đồng hồ mức âm trên màn hình trước khi bạn bấm quay.</li>
+    <li><b>Không ra khỏi máy.</b> Tiếng nằm trong tệp phim lưu ở thư viện của máy bạn.
+        App không gửi âm thanh đi đâu, không phân tích lời nói, không giữ bản ghi nào khác.</li>
+    <li><b>Lúc chờ chỉ đọc mức to nhỏ.</b> Khi đứng ở chế độ Phim mà chưa quay, app đọc
+        mức âm để vẽ đồng hồ rồi bỏ âm thanh đi ngay. Rời chế độ Phim là app nhả micro.</li>
+    <li><b>Từ chối vẫn dùng được.</b> Không cấp quyền thì vẫn quay phim được, tệp không
+        có tiếng. Tua nhanh và quay chậm vốn không thu tiếng.</li>
+  </ul>
 </section>
 
 <section>
@@ -240,8 +267,15 @@
     <li>Gỡ app là mọi thứ trong thư mục riêng mất theo. Ảnh đã bấm giữ thì ở lại thư viện,
         vì lúc đó chúng đã là ảnh của máy chứ không của app.</li>
   </ul>
-  <p>App <b>không lưu cài đặt</b>: không có cơ sở dữ liệu, không có tệp thiết lập. Đóng
-  app là mọi lựa chọn về mặc định.</p>
+  <p><b>Phim</b> thì ghi thẳng vào thư mục <b>Movies/CAM-Coach</b> trong thư viện của máy
+  ngay lúc quay, và không rời khỏi điện thoại. App chỉ mở và xoá được những đoạn do chính
+  nó quay.</p>
+  <p><b>Bảng màu (LUT).</b> Khi bạn nhập bảng màu từ tệp, app đọc đúng những tệp bạn chọn
+  trong bộ chọn tệp của hệ thống và không đọc gì khác trong bộ nhớ. Bảng màu — nhập từ
+  tệp hay tải về — nằm trong thư mục riêng của app, cùng một tệp nhỏ ghi bảng nào bạn
+  đang dùng và bảng nào bạn đánh dấu ưa thích.</p>
+  <p>Ngoài chỗ đó ra app <b>không lưu cài đặt</b>: không có cơ sở dữ liệu, không có tệp
+  thiết lập. Đóng app là mọi lựa chọn khác về mặc định.</p>
 </section>
 
 <section>
