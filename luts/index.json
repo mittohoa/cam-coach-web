@@ -1,0 +1,143 @@
+{
+  "format": 1,
+  "author": "CAM-Coach",
+  "license": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.vi",
+  "packs": [
+    {
+      "id": "dien-anh",
+      "name": "Điện ảnh",
+      "note": "Sáu màu phim chiếu rạp: da ấm trên nền lạnh, đêm xanh, hoàng hôn.",
+      "author": "CAM-Coach",
+      "license": "CC0 1.0",
+      "luts": [
+        {
+          "name": "Xanh cam dịu",
+          "file": "dien-anh/xanh-cam-diu.cube",
+          "bytes": 862527,
+          "sha256": "ab1363ecdb677f780d843f7376c6f38d5e504c0a07a63d2f626d830c1c6761fb"
+        },
+        {
+          "name": "Bạc màu",
+          "file": "dien-anh/bac-mau.cube",
+          "bytes": 862523,
+          "sha256": "751cbd70cf1578ca870a0e878fbbc37bf553ab76ba13a035a95fa11fbbb35532"
+        },
+        {
+          "name": "Đêm xanh",
+          "file": "dien-anh/dem-xanh.cube",
+          "bytes": 862523,
+          "sha256": "fdbeae1375a47beb07d7db6e48f7dd7ad37cf5a0d0fb816c7834dcc30c27b036"
+        },
+        {
+          "name": "Hoàng hôn",
+          "file": "dien-anh/hoang-hon.cube",
+          "bytes": 862524,
+          "sha256": "563f6407cd791de60088ba6514c7a61fb5f1fbbffc44610c713baf8c0051bb0e"
+        },
+        {
+          "name": "Rêu xanh",
+          "file": "dien-anh/reu-xanh.cube",
+          "bytes": 862522,
+          "sha256": "6c133217c6b506b77a6594e9945104fa30db6ad41ae636afbab0d0ba56736ba4"
+        },
+        {
+          "name": "Phố đèn",
+          "file": "dien-anh/pho-den.cube",
+          "bytes": 862524,
+          "sha256": "71ebceaee46bc6e130d958c7c94b0d3270009423bacaa445db56a6cf623c026b"
+        }
+      ]
+    },
+    {
+      "id": "phim-nhua",
+      "name": "Phim nhựa",
+      "note": "Sáu chất phim cuộn: nắng vàng, lá non, ảnh cũ, và ba kiểu một màu.",
+      "author": "CAM-Coach",
+      "license": "CC0 1.0",
+      "luts": [
+        {
+          "name": "Nắng vàng",
+          "file": "phim-nhua/nang-vang.cube",
+          "bytes": 862525,
+          "sha256": "05bed900a594f0eb1e6b2c3a97c7ad1431c6a8b5e41301d71d991ee345d60125"
+        },
+        {
+          "name": "Lá non",
+          "file": "phim-nhua/la-non.cube",
+          "bytes": 862520,
+          "sha256": "8ddff169e2b0d01419b95468739947b71e3c3240876d1f4fc15e14384b30fd3c"
+        },
+        {
+          "name": "Ảnh cũ",
+          "file": "phim-nhua/anh-cu.cube",
+          "bytes": 862522,
+          "sha256": "e81a79025f6ca96437fdfe163f0d482cb41c6be4104ee94553cbec5c37b35f52"
+        },
+        {
+          "name": "Đen trắng mềm",
+          "file": "phim-nhua/den-trang-mem.cube",
+          "bytes": 862531,
+          "sha256": "7f4ddda7552fa79e5834c459619b890f09d12a37176a11965198ff7f0e796709"
+        },
+        {
+          "name": "Đen trắng đậm",
+          "file": "phim-nhua/den-trang-dam.cube",
+          "bytes": 862532,
+          "sha256": "e356e2c5865b1cdb8ccc2fdbf2137115676ff24b3b2100528dd9fe733e27b0de"
+        },
+        {
+          "name": "Nâu xưa",
+          "file": "phim-nhua/nau-xua.cube",
+          "bytes": 862522,
+          "sha256": "1dc0feef754bb932c4302f3a6cc094568f77edd9cfead5b26a24683ee66cc60a"
+        }
+      ]
+    },
+    {
+      "id": "doi-thuong",
+      "name": "Đời thường",
+      "note": "Sáu màu cho người và cảnh hằng ngày: da mềm, trong veo, bốn mùa.",
+      "author": "CAM-Coach",
+      "license": "CC0 1.0",
+      "luts": [
+        {
+          "name": "Da hồng",
+          "file": "doi-thuong/da-hong.cube",
+          "bytes": 862522,
+          "sha256": "0b331dd31f9b9415d59827741846a524e11e5189221ce1ccd53a610e2a63e42c"
+        },
+        {
+          "name": "Trong veo",
+          "file": "doi-thuong/trong-veo.cube",
+          "bytes": 862522,
+          "sha256": "0628b6b76e1c425295bf7e68875c80de86fe117f60b460fde1fcbce82d92d930"
+        },
+        {
+          "name": "Kẹo ngọt",
+          "file": "doi-thuong/keo-ngot.cube",
+          "bytes": 862525,
+          "sha256": "89412ec51d845eb90e4b06137cf2ab1899ce853b4ffcf022e5028e395e372b7b"
+        },
+        {
+          "name": "Mùa thu",
+          "file": "doi-thuong/mua-thu.cube",
+          "bytes": 862521,
+          "sha256": "e83e0c214b717e39874d8d1c8c99c9d7425ce3bad097478ba42b15cfe0278652"
+        },
+        {
+          "name": "Mùa đông",
+          "file": "doi-thuong/mua-dong.cube",
+          "bytes": 862524,
+          "sha256": "ecd92358d8acd9b9c018de75d7bffa02ae4df0eccdb4633d6087cfde267ea842"
+        },
+        {
+          "name": "Cà phê",
+          "file": "doi-thuong/ca-phe.cube",
+          "bytes": 862521,
+          "sha256": "0f476e908881165f542bf236c1effe62c99d7e19c544472dddfddc92ef85b41f"
+        }
+      ]
+    }
+  ]
+}

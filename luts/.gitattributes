@@ -1,0 +1,4 @@
+# App doi chieu ma bam SHA-256 cua tung tep. Git ma doi kieu xuong dong
+# thi byte tren may chu khac byte luc tinh ma bam, va app tu choi ca goi.
+*.cube -text
+index.json -text
